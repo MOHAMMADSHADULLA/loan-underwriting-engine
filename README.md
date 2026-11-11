@@ -17,7 +17,7 @@ This repository delivers a production-grade, reproducible software solution for 
 - **Explicit Underwriting Decisions:** Deterministic policy rules citing transparent rule codes and risk-based pricing.
 - **Amortization Schedules & Disbursement Eligibility:** Exact French amortization with penny-accurate terminal reconciliation.
 - **Traceable Chronological Audit Event Ledger:** State transition event logging preserving audit traceability.
-- **Independent 7-Suite Validation Engine:** Verifying data integrity and independently detecting all 5 required edge cases without leaking ground truth.
+- **Independent 8-Suite Validation Engine:** Verifying data integrity and independently detecting all 5 required edge cases without leaking ground truth.
 
 ---
 
@@ -105,7 +105,7 @@ The validation engine (`src/validator/`) executes 8 independent audit suites:
 - **`check_fair_lending_compliance`**: Asserts 0 protected demographic attributes in decision reason codes or inputs.
 - **`check_term_bounds`**: Evaluates `requested_term_months` against the linked product's min/max range.
 - **`check_income_source_conflicts`**: Evaluates declared income against verified income records using the affordability definition.
-- **`check_date_ordering`**: Audits complete lifecycle chronological transitions: submission $\le$ document upload $\le$ document verification, submission $\le$ affordability evaluation $\le$ decision $\le$ disbursement.
+- **`check_date_ordering`**: Audits complete lifecycle chronological transitions: submission <= document upload <= document verification, submission <= affordability evaluation <= decision <= disbursement.
 - **`check_schedule_arithmetic_reconciliation`**: Asserts that sum of principal installments matches approved loan principal within 1 cent.
 - **`check_disbursement_integrity`**: Detects duplicate payouts and unapproved loan disbursements.
 - **`ground_truth_reconciliation`**: Reconciles detected counts across **all five** edge case categories against the ground truth manifest (`match = True` requires 5/5 parity).
@@ -184,7 +184,7 @@ OVERALL REPRODUCIBILITY RESULT: SUCCESS (100% BIT-FOR-BIT IDENTICAL)
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/loan-underwriting-engine.git
+git clone https://github.com/MOHAMMADSHADULLA/loan-underwriting-engine.git
 cd loan-underwriting-engine
 
 # Install dependencies
@@ -193,7 +193,7 @@ pip install -r requirements.txt
 
 ### Exact Operational Commands
 
-#### 1. Run Automated Test Suite (20 tests)
+#### 1. Run Automated Test Suite (25 tests)
 ```bash
 python -m pytest -v
 ```
