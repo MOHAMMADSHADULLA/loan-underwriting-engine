@@ -1,0 +1,271 @@
+{
+  "generated_at": "2026-11-11T17:57:42.814653",
+  "dataset_summary": {
+    "products": 4,
+    "applicants": 100,
+    "employments": 100,
+    "income_records": 116,
+    "credit_facilities": 185,
+    "applications": 60,
+    "documents": 240,
+    "affordability_checks": 60,
+    "decisions": 60,
+    "repayment_schedules": 1140,
+    "application_events": 265,
+    "ground_truth_entries": 64
+  },
+  "primary_key_uniqueness": {
+    "overall_passed": true,
+    "details": {
+      "loan_products": {
+        "total_records": 4,
+        "unique_keys": 4,
+        "duplicates": 0,
+        "passed": true
+      },
+      "applicants": {
+        "total_records": 100,
+        "unique_keys": 100,
+        "duplicates": 0,
+        "passed": true
+      },
+      "employments": {
+        "total_records": 100,
+        "unique_keys": 100,
+        "duplicates": 0,
+        "passed": true
+      },
+      "income_records": {
+        "total_records": 116,
+        "unique_keys": 116,
+        "duplicates": 0,
+        "passed": true
+      },
+      "credit_facilities": {
+        "total_records": 185,
+        "unique_keys": 185,
+        "duplicates": 0,
+        "passed": true
+      },
+      "loan_applications": {
+        "total_records": 60,
+        "unique_keys": 60,
+        "duplicates": 0,
+        "passed": true
+      },
+      "documents": {
+        "total_records": 240,
+        "unique_keys": 240,
+        "duplicates": 0,
+        "passed": true
+      },
+      "affordability_checks": {
+        "total_records": 60,
+        "unique_keys": 60,
+        "duplicates": 0,
+        "passed": true
+      },
+      "decisions": {
+        "total_records": 60,
+        "unique_keys": 60,
+        "duplicates": 0,
+        "passed": true
+      },
+      "repayment_schedules": {
+        "total_records": 1140,
+        "unique_keys": 1140,
+        "duplicates": 0,
+        "passed": true
+      },
+      "application_events": {
+        "total_records": 265,
+        "unique_keys": 265,
+        "duplicates": 0,
+        "passed": true
+      },
+      "ground_truth": {
+        "total_records": 64,
+        "unique_keys": 64,
+        "duplicates": 0,
+        "passed": true
+      }
+    }
+  },
+  "foreign_key_integrity": {
+    "overall_passed": true,
+    "details": {
+      "employments.applicant_id": {
+        "total_fk_refs": 100,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "income_records.applicant_id": {
+        "total_fk_refs": 116,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "credit_facilities.applicant_id": {
+        "total_fk_refs": 185,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "loan_applications.applicant_id": {
+        "total_fk_refs": 60,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "loan_applications.product_id": {
+        "total_fk_refs": 60,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "documents.application_id": {
+        "total_fk_refs": 240,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "documents.applicant_id": {
+        "total_fk_refs": 240,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "affordability_checks.application_id": {
+        "total_fk_refs": 60,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "decisions.application_id": {
+        "total_fk_refs": 60,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "repayment_schedules.application_id": {
+        "total_fk_refs": 1140,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "application_events.application_id": {
+        "total_fk_refs": 265,
+        "missing_parent_refs": 0,
+        "passed": true
+      }
+    }
+  },
+  "date_ordering": {
+    "total_audited": 60,
+    "temporal_inversions_count": 2,
+    "inversions": [
+      {
+        "application_id": "LOAN-2026-000020",
+        "rule": "DECISION_PRECEDES_AFFORDABILITY",
+        "affordability_time": "2026-06-27 11:41:17",
+        "decision_time": "2026-06-27 08:26:17",
+        "delta_minutes": 195.0,
+        "details": "Decision DEC-LOAN-2026-000020-01 rendered before affordability check AFF-LOAN-2026-000020-01"
+      },
+      {
+        "application_id": "LOAN-2026-000025",
+        "rule": "DECISION_PRECEDES_AFFORDABILITY",
+        "affordability_time": "2026-05-31 00:47:04",
+        "decision_time": "2026-05-30 21:32:04",
+        "delta_minutes": 195.0,
+        "details": "Decision DEC-LOAN-2026-000025-01 rendered before affordability check AFF-LOAN-2026-000025-01"
+      }
+    ],
+    "passed": false
+  },
+  "schedule_reconciliation": {
+    "audited_schedules_count": 23,
+    "discrepancies_count": 2,
+    "discrepancies": [
+      {
+        "application_id": "LOAN-2026-000025",
+        "approved_principal": 3000.0,
+        "scheduled_total": 3150.0,
+        "discrepancy": 150.0
+      },
+      {
+        "application_id": "LOAN-2026-000030",
+        "approved_principal": 7000.0,
+        "scheduled_total": 7150.0,
+        "discrepancy": 150.0
+      }
+    ],
+    "passed": false
+  },
+  "disbursement_integrity": {
+    "total_disbursement_events": 25,
+    "duplicate_disbursements": [
+      "LOAN-2026-000030",
+      "LOAN-2026-000035"
+    ],
+    "duplicate_disbursements_count": 2,
+    "unapproved_disbursements": [],
+    "unapproved_disbursements_count": 0,
+    "passed": false
+  },
+  "fair_lending_compliance": {
+    "audited_decisions": 60,
+    "violations_found": 0,
+    "violations": [],
+    "passed": true
+  },
+  "term_bounds": {
+    "total_audited": 60,
+    "violations_count": 2,
+    "violations": [
+      {
+        "application_id": "LOAN-2026-000010",
+        "product_id": "PROD-002",
+        "requested_term_months": 108,
+        "min_term_months": 24,
+        "max_term_months": 84,
+        "violation_type": "EXCEEDS_MAX_TERM"
+      },
+      {
+        "application_id": "LOAN-2026-000015",
+        "product_id": "PROD-003",
+        "requested_term_months": 96,
+        "min_term_months": 12,
+        "max_term_months": 72,
+        "violation_type": "EXCEEDS_MAX_TERM"
+      }
+    ],
+    "passed": false
+  },
+  "income_source_conflicts": {
+    "total_audited": 60,
+    "discrepancy_threshold": 0.4,
+    "violations_count": 2,
+    "violations": [
+      {
+        "application_id": "LOAN-2026-000015",
+        "applicant_id": "APP-2026-000015",
+        "declared_monthly_income": 4945.92,
+        "verified_monthly_income": 1545.6,
+        "discrepancy_ratio": 2.2
+      },
+      {
+        "application_id": "LOAN-2026-000020",
+        "applicant_id": "APP-2026-000020",
+        "declared_monthly_income": 12307.3,
+        "verified_monthly_income": 3846.03,
+        "discrepancy_ratio": 2.2
+      }
+    ],
+    "passed": false
+  },
+  "ground_truth_reconciliation": {
+    "expected_temporal_inversions": 2,
+    "detected_temporal_inversions": 2,
+    "expected_schedule_discrepancies": 2,
+    "detected_schedule_discrepancies": 2,
+    "expected_duplicate_disbursements": 2,
+    "detected_duplicate_disbursements": 2,
+    "expected_term_out_of_bounds": 2,
+    "detected_term_out_of_bounds": 2,
+    "expected_income_source_conflicts": 2,
+    "detected_income_source_conflicts": 2,
+    "match": true
+  }
+}

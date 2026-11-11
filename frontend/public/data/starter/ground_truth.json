@@ -1,0 +1,642 @@
+[
+  {
+    "application_id": "LOAN-2026-000001",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000001",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000002",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000002",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000003",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000003",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_CREDIT_SCORE_BELOW_MIN",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000004",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000004",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000005",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000005",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "MANUAL_REVIEW",
+    "rule_triggered": "BORDERLINE_CREDIT_SCORE",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000006",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000006",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000007",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000007",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED|BORDERLINE_CREDIT_SCORE",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000008",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000008",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "MANUAL_REVIEW",
+    "rule_triggered": "MARGINAL_AFFORDABILITY_BUFFER",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000009",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000009",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000010",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000010",
+    "issue_type": "TERM_OUT_OF_BOUNDS",
+    "is_anomaly": true,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "ERR_TERM_OUT_OF_BOUNDS",
+    "description": "Requested term 108m exceeds product maximum 84m."
+  },
+  {
+    "application_id": "LOAN-2026-000011",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000011",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_CREDIT_SCORE_BELOW_MIN",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000012",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000012",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000013",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000013",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000014",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000014",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000015",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000015",
+    "issue_type": "TERM_OUT_OF_BOUNDS",
+    "is_anomaly": true,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "ERR_TERM_OUT_OF_BOUNDS",
+    "description": "Requested term 96m exceeds product maximum 72m."
+  },
+  {
+    "application_id": "LOAN-2026-000015",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000015",
+    "issue_type": "INCOME_SOURCE_CONFLICT",
+    "is_anomaly": true,
+    "expected_decision": "MANUAL_REVIEW",
+    "rule_triggered": "INCOME_DECLARED_VERIFIED_DISCREPANCY",
+    "description": "Declared income $4945.92 diverges > 200% from verified income $1545.6000000000001."
+  },
+  {
+    "application_id": "LOAN-2026-000016",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000016",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000017",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000017",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_CREDIT_SCORE_BELOW_MIN",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000018",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000018",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_CREDIT_SCORE_BELOW_MIN|PENDING_IDENTITY_VERIFICATION",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000019",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000019",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_INCOME_DOCUMENT_VERIFICATION",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000020",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000020",
+    "issue_type": "INCOME_SOURCE_CONFLICT",
+    "is_anomaly": true,
+    "expected_decision": "MANUAL_REVIEW",
+    "rule_triggered": "INCOME_DECLARED_VERIFIED_DISCREPANCY",
+    "description": "Declared income $12307.3 diverges > 200% from verified income $3846.0299999999997."
+  },
+  {
+    "application_id": "LOAN-2026-000020",
+    "entity_type": "Decision",
+    "record_id": "DEC-LOAN-2026-000020-01",
+    "issue_type": "DECISION_PRECEDES_CHECKS",
+    "is_anomaly": true,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "TEMPORAL_SEQUENCE_VIOLATION",
+    "description": "Decision timestamp 2026-06-27 08:26:17 occurred before affordability check 2026-06-27 11:41:17."
+  },
+  {
+    "application_id": "LOAN-2026-000021",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000021",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000022",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000022",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000023",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000023",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000024",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000024",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000025",
+    "entity_type": "Decision",
+    "record_id": "DEC-LOAN-2026-000025-01",
+    "issue_type": "DECISION_PRECEDES_CHECKS",
+    "is_anomaly": true,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "TEMPORAL_SEQUENCE_VIOLATION",
+    "description": "Decision timestamp 2026-05-30 21:32:04 occurred before affordability check 2026-05-31 00:47:04."
+  },
+  {
+    "application_id": "LOAN-2026-000025",
+    "entity_type": "RepaymentSchedule",
+    "record_id": "SCH-LOAN-2026-000025-24",
+    "issue_type": "SCHEDULE_RECONCILIATION_MISMATCH",
+    "is_anomaly": true,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "SCHEDULE_ARITHMETIC_RECONCILIATION_MISMATCH",
+    "description": "Repayment schedule for loan LOAN-2026-000025 does not sum to approved principal $3000.00."
+  },
+  {
+    "application_id": "LOAN-2026-000026",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000026",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "MANUAL_REVIEW",
+    "rule_triggered": "MARGINAL_AFFORDABILITY_BUFFER",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000027",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000027",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000028",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000028",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_IDENTITY_VERIFICATION|PENDING_INCOME_DOCUMENT_VERIFICATION",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000029",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000029",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000030",
+    "entity_type": "RepaymentSchedule",
+    "record_id": "SCH-LOAN-2026-000030-36",
+    "issue_type": "SCHEDULE_RECONCILIATION_MISMATCH",
+    "is_anomaly": true,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "SCHEDULE_ARITHMETIC_RECONCILIATION_MISMATCH",
+    "description": "Repayment schedule for loan LOAN-2026-000030 does not sum to approved principal $7000.00."
+  },
+  {
+    "application_id": "LOAN-2026-000030",
+    "entity_type": "ApplicationEvent",
+    "record_id": "EVT-LOAN-2026-000030-134",
+    "issue_type": "DUPLICATE_DISBURSEMENT",
+    "is_anomaly": true,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "DUPLICATE_DISBURSEMENT_VIOLATION",
+    "description": "Application LOAN-2026-000030 received duplicate disbursement event EVT-LOAN-2026-000030-134."
+  },
+  {
+    "application_id": "LOAN-2026-000031",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000031",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED|BORDERLINE_CREDIT_SCORE",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000032",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000032",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "MANUAL_REVIEW",
+    "rule_triggered": "PENDING_INCOME_DOCUMENT_VERIFICATION",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000033",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000033",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000034",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000034",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000035",
+    "entity_type": "ApplicationEvent",
+    "record_id": "EVT-LOAN-2026-000035-157",
+    "issue_type": "DUPLICATE_DISBURSEMENT",
+    "is_anomaly": true,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "DUPLICATE_DISBURSEMENT_VIOLATION",
+    "description": "Application LOAN-2026-000035 received duplicate disbursement event EVT-LOAN-2026-000035-157."
+  },
+  {
+    "application_id": "LOAN-2026-000036",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000036",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000037",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000037",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000038",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000038",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000039",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000039",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_CREDIT_SCORE_BELOW_MIN|FAIL_AFFORDABILITY_DTI_EXCEEDED",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000040",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000040",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_CREDIT_SCORE_BELOW_MIN|FAIL_AFFORDABILITY_DTI_EXCEEDED",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000041",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000041",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_INCOME_DOCUMENT_VERIFICATION",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000042",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000042",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED|FAIL_KYC_IDENTITY_UNVERIFIED",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000043",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000043",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000044",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000044",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000045",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000045",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_KYC_IDENTITY_UNVERIFIED",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000046",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000046",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000047",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000047",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000048",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000048",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000049",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000049",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "MANUAL_REVIEW",
+    "rule_triggered": "PENDING_INCOME_DOCUMENT_VERIFICATION",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000050",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000050",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED|FAIL_UNSTABLE_EMPLOYMENT_NO_INCOME|PENDING_INCOME_DOCUMENT_VERIFICATION",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000051",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000051",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_INCOME_DOCUMENT_VERIFICATION",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000052",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000052",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000053",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000053",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "MANUAL_REVIEW",
+    "rule_triggered": "MARGINAL_AFFORDABILITY_BUFFER",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000054",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000054",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000055",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000055",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000056",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000056",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000057",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000057",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "REJECTED",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000058",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000058",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000059",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000059",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "APPROVED",
+    "rule_triggered": "PASS_ALL_UNDERWRITING_CRITERIA",
+    "description": "Valid standard workflow application obeying all domain rules."
+  },
+  {
+    "application_id": "LOAN-2026-000060",
+    "entity_type": "LoanApplication",
+    "record_id": "LOAN-2026-000060",
+    "issue_type": "NONE",
+    "is_anomaly": false,
+    "expected_decision": "MANUAL_REVIEW",
+    "rule_triggered": "PENDING_IDENTITY_VERIFICATION",
+    "description": "Valid standard workflow application obeying all domain rules."
+  }
+]
