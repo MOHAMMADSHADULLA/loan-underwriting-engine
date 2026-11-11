@@ -1,18 +1,44 @@
 """Validation suite tests verifying integrity, rules, and ground truth correlation."""
 
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from src.domain.enums import (
+    AffordabilityResult,
     ApplicationStatus,
+    DecisionOutcome,
+    DocumentStatus,
+    DocumentType,
+    EventType,
+    HousingStatus,
     IncomeSource,
+    IssueType,
     LoanPurpose,
+    ReviewerRole,
     VerificationMethod,
     VerificationStatus,
 )
-from src.domain.models import IncomeRecord, LoanApplication, LoanProduct
+from src.domain.models import (
+    AffordabilityCheck,
+    Applicant,
+    ApplicationEvent,
+    Decision,
+    Document,
+    GroundTruthEntry,
+    IncomeRecord,
+    LoanApplication,
+    LoanProduct,
+)
 from src.generator.engine import GeneratedDataset, generate_dataset
 from src.validator.engine import run_full_validation_suite
-from src.validator.rules import check_income_source_conflicts, check_term_bounds
+from src.validator.rules import (
+    check_date_ordering,
+    check_disbursement_integrity,
+    check_foreign_key_integrity,
+    check_income_source_conflicts,
+    check_primary_key_uniqueness,
+    check_schedule_arithmetic_reconciliation,
+    check_term_bounds,
+)
 
 
 def test_starter_validation_suite(tmp_path: Path):
@@ -394,3 +420,318 @@ def test_check_income_conflicts_isolation_between_applicants():
     result = check_income_source_conflicts(mock_ds, discrepancy_threshold=0.40)
     assert result["passed"] is True
     assert result["violations_count"] == 0
+
+
+def test_check_date_ordering_lifecycle_valid():
+    """Verify check_date_ordering passes on a clean full lifecycle sequence."""
+    t0 = datetime(2026, 3, 1, 10, 0)
+    t1 = datetime(2026, 3, 1, 10, 15)  # upload
+    t2 = datetime(2026, 3, 1, 10, 45)  # verified
+    t3 = datetime(2026, 3, 1, 11, 0)   # affordability
+    t4 = datetime(2026, 3, 1, 11, 30)  # decision
+    t5 = datetime(2026, 3, 2, 10, 0)   # disbursement
+
+    app = LoanApplication(
+        application_id="LOAN-T-LIFECYCLE",
+        applicant_id="APP-001",
+        product_id="PROD-001",
+        requested_principal=10000.0,
+        requested_term_months=36,
+        purpose=LoanPurpose.DEBT_CONSOLIDATION,
+        application_status=ApplicationStatus.DISBURSED,
+        credit_score=750,
+        declared_monthly_income=5000.0,
+        submission_timestamp=t0,
+        updated_at=t5,
+    )
+    doc = Document(
+        document_id="DOC-001",
+        application_id=app.application_id,
+        applicant_id="APP-001",
+        document_type=DocumentType.PROOF_OF_IDENTITY,
+        document_status=DocumentStatus.VERIFIED,
+        file_hash="hash123",
+        uploaded_at=t1,
+        verified_at=t2,
+    )
+    aff = AffordabilityCheck(
+        check_id="AFF-001",
+        application_id=app.application_id,
+        total_verified_monthly_income=5000.0,
+        existing_monthly_debt_obligations=500.0,
+        estimated_living_expenses=1200.0,
+        proposed_loan_monthly_payment=320.0,
+        calculated_dti=0.064,
+        calculated_total_dti=0.164,
+        net_disposable_income=2980.0,
+        affordability_result=AffordabilityResult.PASS,
+        check_timestamp=t3,
+    )
+    dec = Decision(
+        decision_id="DEC-001",
+        application_id=app.application_id,
+        outcome=DecisionOutcome.APPROVED,
+        approved_principal=10000.0,
+        approved_interest_rate=8.5,
+        approved_term_months=36,
+        decision_reason_codes="APPROVED_STANDARD",
+        decision_notes="Approved according to standard policy",
+        reviewer_role=ReviewerRole.AUTOMATED_RULES_ENGINE,
+        decision_timestamp=t4,
+    )
+    evt = ApplicationEvent(
+        event_id="EVT-001",
+        application_id=app.application_id,
+        from_status="APPROVED",
+        to_status="DISBURSED",
+        event_type=EventType.FUNDS_DISBURSED,
+        actor=ReviewerRole.OPERATIONS_ANALYST,
+        timestamp=t5,
+        details="Disbursed",
+    )
+
+    dataset = GeneratedDataset(
+        products=[],
+        applicants=[],
+        employments=[],
+        income_records=[],
+        credit_facilities=[],
+        applications=[app],
+        documents=[doc],
+        affordability_checks=[aff],
+        decisions=[dec],
+        repayment_schedules=[],
+        application_events=[evt],
+        ground_truth=[],
+    )
+
+    res = check_date_ordering(dataset)
+    assert res["passed"] is True
+    assert res["temporal_inversions_count"] == 0
+
+
+def test_check_date_ordering_lifecycle_corrupted_transitions():
+    """Verify check_date_ordering detects temporal inversions at each lifecycle step."""
+    base_t = datetime(2026, 3, 1, 12, 0)
+
+    # 1. Document upload before submission
+    app1 = LoanApplication(
+        application_id="LOAN-CORRUPT-1",
+        applicant_id="APP-001",
+        product_id="PROD-001",
+        requested_principal=10000.0,
+        requested_term_months=36,
+        purpose=LoanPurpose.DEBT_CONSOLIDATION,
+        application_status=ApplicationStatus.SUBMITTED,
+        credit_score=700,
+        declared_monthly_income=5000.0,
+        submission_timestamp=base_t,
+        updated_at=base_t,
+    )
+    doc1 = Document(
+        document_id="DOC-C1",
+        application_id=app1.application_id,
+        applicant_id="APP-001",
+        document_type=DocumentType.PROOF_OF_IDENTITY,
+        document_status=DocumentStatus.VERIFIED,
+        file_hash="h1",
+        uploaded_at=base_t - timedelta(minutes=10),  # Uploaded BEFORE submission
+        verified_at=base_t + timedelta(minutes=10),
+    )
+    ds1 = GeneratedDataset([], [], [], [], [], [app1], [doc1], [], [], [], [], [])
+    res1 = check_date_ordering(ds1)
+    assert res1["passed"] is False
+    assert res1["temporal_inversions_count"] == 1
+    assert res1["inversions"][0]["rule"] == "DOCUMENT_UPLOAD_PRECEDES_SUBMISSION"
+
+    # 2. Document verification before upload
+    doc2 = Document(
+        document_id="DOC-C2",
+        application_id=app1.application_id,
+        applicant_id="APP-001",
+        document_type=DocumentType.PROOF_OF_IDENTITY,
+        document_status=DocumentStatus.VERIFIED,
+        file_hash="h2",
+        uploaded_at=base_t + timedelta(minutes=10),
+        verified_at=base_t + timedelta(minutes=5),  # Verified BEFORE upload
+    )
+    ds2 = GeneratedDataset([], [], [], [], [], [app1], [doc2], [], [], [], [], [])
+    res2 = check_date_ordering(ds2)
+    assert res2["passed"] is False
+    assert res2["temporal_inversions_count"] == 1
+    assert res2["inversions"][0]["rule"] == "DOCUMENT_VERIFICATION_PRECEDES_UPLOAD"
+
+    # 3. Affordability check before submission
+    aff3 = AffordabilityCheck(
+        check_id="AFF-C3",
+        application_id=app1.application_id,
+        total_verified_monthly_income=5000.0,
+        existing_monthly_debt_obligations=500.0,
+        estimated_living_expenses=1200.0,
+        proposed_loan_monthly_payment=320.0,
+        calculated_dti=0.064,
+        calculated_total_dti=0.164,
+        net_disposable_income=2980.0,
+        affordability_result=AffordabilityResult.PASS,
+        check_timestamp=base_t - timedelta(minutes=5),  # Check BEFORE submission
+    )
+    ds3 = GeneratedDataset([], [], [], [], [], [app1], [], [aff3], [], [], [], [])
+    res3 = check_date_ordering(ds3)
+    assert res3["passed"] is False
+    assert res3["temporal_inversions_count"] == 1
+    assert res3["inversions"][0]["rule"] == "AFFORDABILITY_PRECEDES_SUBMISSION"
+
+    # 4. Disbursement before decision
+    dec4 = Decision(
+        decision_id="DEC-C4",
+        application_id=app1.application_id,
+        outcome=DecisionOutcome.APPROVED,
+        approved_principal=10000.0,
+        approved_interest_rate=8.5,
+        approved_term_months=36,
+        decision_reason_codes="APPROVED",
+        decision_notes="Approved according to standard policy",
+        reviewer_role=ReviewerRole.AUTOMATED_RULES_ENGINE,
+        decision_timestamp=base_t + timedelta(hours=2),
+    )
+    evt4 = ApplicationEvent(
+        event_id="EVT-C4",
+        application_id=app1.application_id,
+        from_status="APPROVED",
+        to_status="DISBURSED",
+        event_type=EventType.FUNDS_DISBURSED,
+        actor=ReviewerRole.OPERATIONS_ANALYST,
+        timestamp=base_t + timedelta(hours=1),  # Disbursement BEFORE decision
+        details="Payout",
+    )
+    ds4 = GeneratedDataset([], [], [], [], [], [app1], [], [], [dec4], [], [evt4], [])
+    res4 = check_date_ordering(ds4)
+    assert res4["passed"] is False
+    assert res4["temporal_inversions_count"] == 1
+    assert res4["inversions"][0]["rule"] == "DISBURSEMENT_PRECEDES_DECISION"
+
+
+def test_check_primary_key_uniqueness_ground_truth():
+    """Verify ground truth uniqueness validation catches duplicates and passes distinct records."""
+    gt1 = GroundTruthEntry(
+        application_id="LOAN-001",
+        entity_type="LoanApplication",
+        record_id="LOAN-001",
+        issue_type=IssueType.TERM_OUT_OF_BOUNDS,
+        is_anomaly=True,
+        expected_decision=DecisionOutcome.REJECTED,
+        rule_triggered="TERM_OUT_OF_BOUNDS",
+        description="Term too long",
+    )
+    gt2 = GroundTruthEntry(
+        application_id="LOAN-001",
+        entity_type="LoanApplication",
+        record_id="LOAN-001",
+        issue_type=IssueType.INCOME_SOURCE_CONFLICT,  # Different issue_type on same app -> distinct!
+        is_anomaly=True,
+        expected_decision=DecisionOutcome.REJECTED,
+        rule_triggered="INCOME_CONFLICT",
+        description="Conflict",
+    )
+    gt_duplicate = GroundTruthEntry(
+        application_id="LOAN-001",
+        entity_type="LoanApplication",
+        record_id="LOAN-001",
+        issue_type=IssueType.TERM_OUT_OF_BOUNDS,  # Duplicate of gt1!
+        is_anomaly=True,
+        expected_decision=DecisionOutcome.REJECTED,
+        rule_triggered="TERM_OUT_OF_BOUNDS",
+        description="Duplicate entry",
+    )
+
+    clean_ds = GeneratedDataset([], [], [], [], [], [], [], [], [], [], [], [gt1, gt2])
+    clean_res = check_primary_key_uniqueness(clean_ds)
+    assert clean_res["overall_passed"] is True
+    assert clean_res["details"]["ground_truth"]["passed"] is True
+    assert clean_res["details"]["ground_truth"]["duplicates"] == 0
+
+    corrupt_ds = GeneratedDataset([], [], [], [], [], [], [], [], [], [], [], [gt1, gt2, gt_duplicate])
+    corrupt_res = check_primary_key_uniqueness(corrupt_ds)
+    assert corrupt_res["overall_passed"] is False
+    assert corrupt_res["details"]["ground_truth"]["passed"] is False
+    assert corrupt_res["details"]["ground_truth"]["duplicates"] == 1
+
+
+def test_check_foreign_key_integrity_documents_applicant():
+    """Verify foreign key validation checks documents.applicant_id -> applicants.applicant_id."""
+    app_record = Applicant(
+        applicant_id="APP-VALID",
+        first_name="Jane",
+        last_name="Doe",
+        email="jane.doe@example.com",
+        phone="+15551234567",
+        date_of_birth=date(1990, 1, 1),
+        housing_status=HousingStatus.OWN,
+        national_id_hash="abc123hash",
+        created_at=datetime(2026, 1, 1),
+    )
+    loan_app = LoanApplication(
+        application_id="LOAN-V-1",
+        applicant_id="APP-VALID",
+        product_id="PROD-001",
+        requested_principal=5000.0,
+        requested_term_months=24,
+        purpose=LoanPurpose.HOME_IMPROVEMENT,
+        application_status=ApplicationStatus.SUBMITTED,
+        credit_score=720,
+        declared_monthly_income=4000.0,
+        submission_timestamp=datetime(2026, 3, 1),
+        updated_at=datetime(2026, 3, 1),
+    )
+    valid_doc = Document(
+        document_id="DOC-V-1",
+        application_id="LOAN-V-1",
+        applicant_id="APP-VALID",
+        document_type=DocumentType.BANK_STATEMENTS,
+        document_status=DocumentStatus.VERIFIED,
+        file_hash="h123",
+        uploaded_at=datetime(2026, 3, 1, 10, 5),
+    )
+
+    clean_ds = GeneratedDataset([], [app_record], [], [], [], [loan_app], [valid_doc], [], [], [], [], [])
+    clean_res = check_foreign_key_integrity(clean_ds)
+    assert clean_res["details"]["documents.applicant_id"]["passed"] is True
+    assert clean_res["details"]["documents.applicant_id"]["missing_parent_refs"] == 0
+
+    # Corrupt document with unknown applicant_id
+    corrupt_doc = Document(
+        document_id="DOC-ORPHAN",
+        application_id="LOAN-V-1",
+        applicant_id="APP-UNKNOWN-ORPHAN",
+        document_type=DocumentType.BANK_STATEMENTS,
+        document_status=DocumentStatus.VERIFIED,
+        file_hash="h1234",
+        uploaded_at=datetime(2026, 3, 1, 10, 5),
+    )
+    corrupt_ds = GeneratedDataset([], [app_record], [], [], [], [loan_app], [corrupt_doc], [], [], [], [], [])
+    corrupt_res = check_foreign_key_integrity(corrupt_ds)
+    assert corrupt_res["overall_passed"] is False
+    assert corrupt_res["details"]["documents.applicant_id"]["passed"] is False
+    assert corrupt_res["details"]["documents.applicant_id"]["missing_parent_refs"] == 1
+
+
+def test_all_five_edge_cases_independently_detected_starter():
+    """Verify all 5 edge case categories are independently detected by their dedicated rules."""
+    dataset = generate_dataset(
+        num_applicants=100,
+        num_applications=60,
+        seed=20261022,
+        num_edge_cases_per_type=2,
+    )
+
+    order_res = check_date_ordering(dataset)
+    sched_res = check_schedule_arithmetic_reconciliation(dataset)
+    disb_res = check_disbursement_integrity(dataset)
+    term_res = check_term_bounds(dataset)
+    income_res = check_income_source_conflicts(dataset)
+
+    assert order_res["temporal_inversions_count"] == 2
+    assert sched_res["discrepancies_count"] == 2
+    assert disb_res["duplicate_disbursements_count"] == 2
+    assert term_res["violations_count"] == 2
+    assert income_res["violations_count"] == 2

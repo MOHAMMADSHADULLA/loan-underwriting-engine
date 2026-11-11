@@ -99,13 +99,13 @@ The generator injects 5 documented negative scenarios with zero corruption of un
 5. **`DUPLICATE_DISBURSEMENT`**: Secondary unauthorized payout event triggered for an already disbursed loan. Independently detected by `check_disbursement_integrity`.
 
 ### Validation Suite Architecture
-The validation engine (`src/validator/`) executes 7 independent audit suites:
-- **`check_primary_key_uniqueness`**: Asserts 100% PK uniqueness across all 11 relational tables.
-- **`check_foreign_key_integrity`**: Asserts 0 orphan records across all 10 foreign-key relationships.
+The validation engine (`src/validator/`) executes 8 independent audit suites:
+- **`check_primary_key_uniqueness`**: Asserts 100% PK uniqueness across all 11 relational tables plus `ground_truth` (12 audited entities).
+- **`check_foreign_key_integrity`**: Asserts 0 orphan records across all 11 foreign-key relationships (including `documents.applicant_id → applicants.applicant_id`).
 - **`check_fair_lending_compliance`**: Asserts 0 protected demographic attributes in decision reason codes or inputs.
 - **`check_term_bounds`**: Evaluates `requested_term_months` against the linked product's min/max range.
 - **`check_income_source_conflicts`**: Evaluates declared income against verified income records using the affordability definition.
-- **`check_date_ordering`**: Audits temporal sequence across application, check, decision, and disbursement timestamps.
+- **`check_date_ordering`**: Audits complete lifecycle chronological transitions: submission $\le$ document upload $\le$ document verification, submission $\le$ affordability evaluation $\le$ decision $\le$ disbursement.
 - **`check_schedule_arithmetic_reconciliation`**: Asserts that sum of principal installments matches approved loan principal within 1 cent.
 - **`check_disbursement_integrity`**: Detects duplicate payouts and unapproved loan disbursements.
 - **`ground_truth_reconciliation`**: Reconciles detected counts across **all five** edge case categories against the ground truth manifest (`match = True` requires 5/5 parity).

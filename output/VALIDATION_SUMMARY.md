@@ -1,6 +1,6 @@
 # Loan Underwriting Engine — Validation & Audit Report
 
-**Report Generation Date:** 2026-11-11T17:32:15.626527  
+**Report Generation Date:** 2026-11-11T17:58:59.107233  
 **Evaluated Dataset:** {'products': 4, 'applicants': 10000, 'employments': 10000, 'income_records': 11919, 'credit_facilities': 18103, 'applications': 6000, 'documents': 24000, 'affordability_checks': 6000, 'decisions': 6000, 'repayment_schedules': 92232, 'application_events': 25878, 'ground_truth_entries': 6000}
 
 ---
@@ -9,7 +9,7 @@
 
 | Integrity Check Suite | Status | Key Metrics |
 | :--- | :---: | :--- |
-| **Primary Key Uniqueness** | `PASS` | 100% Unique across all 11 relational entities |
+| **Primary Key Uniqueness** | `PASS` | 100% Unique across all 12 relational and audit entities |
 | **Foreign Key Referential Integrity** | `PASS` | 0 orphan records; 100% valid parent relationships |
 | **Fair Lending Input Guardrail** | `PASS` | 0 protected demographic attributes accessible to underwriting rules |
 | **Term-Bound Validation** | `AUDITED` | 10 out-of-bounds term edge cases detected |
@@ -90,6 +90,12 @@ All generated entities maintain strict primary key uniqueness constraints:
     "unique_keys": 25878,
     "duplicates": 0,
     "passed": true
+  },
+  "ground_truth": {
+    "total_records": 6000,
+    "unique_keys": 6000,
+    "duplicates": 0,
+    "passed": true
   }
 }
 ```
@@ -126,6 +132,11 @@ All child entities reference strictly existing parent keys:
     "passed": true
   },
   "documents.application_id": {
+    "total_fk_refs": 24000,
+    "missing_parent_refs": 0,
+    "passed": true
+  },
+  "documents.applicant_id": {
     "total_fk_refs": 24000,
     "missing_parent_refs": 0,
     "passed": true
@@ -185,7 +196,7 @@ All child entities reference strictly existing parent keys:
 ---
 
 ## 7. Temporal Consistency & Date Ordering Audit
-- **Audited Decision Timestamps:** `6000`
+- **Audited Applications (Full Lifecycle):** `6000`
 - **Temporal Inversions Detected:** `10`
 - **Ground Truth Match:** Detected count `10` equals expected `10`.
 

@@ -16,7 +16,7 @@ from src.rules.compliance import PROTECTED_ATTRIBUTES
 
 
 def check_primary_key_uniqueness(dataset: GeneratedDataset) -> Dict[str, Any]:
-    """Validates that primary keys are strictly unique in all tables."""
+    """Validates that primary keys are strictly unique in all tables, including ground truth."""
     checks = {
         "loan_products": [p.product_id for p in dataset.products],
         "applicants": [a.applicant_id for a in dataset.applicants],
@@ -29,6 +29,10 @@ def check_primary_key_uniqueness(dataset: GeneratedDataset) -> Dict[str, Any]:
         "decisions": [dec.decision_id for dec in dataset.decisions],
         "repayment_schedules": [s.schedule_id for s in dataset.repayment_schedules],
         "application_events": [evt.event_id for evt in dataset.application_events],
+        "ground_truth": [
+            f"{gt.application_id}:{gt.record_id}:{gt.issue_type.value}"
+            for gt in dataset.ground_truth
+        ],
     }
 
     results = {}
@@ -62,6 +66,7 @@ def check_foreign_key_integrity(dataset: GeneratedDataset) -> Dict[str, Any]:
         ("loan_applications.applicant_id", [app.applicant_id for app in dataset.applications], applicant_ids),
         ("loan_applications.product_id", [app.product_id for app in dataset.applications], product_ids),
         ("documents.application_id", [d.application_id for d in dataset.documents], application_ids),
+        ("documents.applicant_id", [d.applicant_id for d in dataset.documents], applicant_ids),
         ("affordability_checks.application_id", [c.application_id for c in dataset.affordability_checks], application_ids),
         ("decisions.application_id", [dec.application_id for dec in dataset.decisions], application_ids),
         ("repayment_schedules.application_id", [s.application_id for s in dataset.repayment_schedules], application_ids),
@@ -86,31 +91,89 @@ def check_foreign_key_integrity(dataset: GeneratedDataset) -> Dict[str, Any]:
 
 def check_date_ordering(dataset: GeneratedDataset) -> Dict[str, Any]:
     """
-    Validates temporal sequence:
-    application_date <= doc_upload <= affordability_check <= decision_timestamp <= disbursement.
-    Detects temporal inversions (e.g. DECISION_PRECEDES_CHECKS edge cases).
+    Validates temporal sequence across the complete application lifecycle:
+    1. application.submission_timestamp <= document.uploaded_at
+    2. document.uploaded_at <= document.verified_at (when verified_at is present)
+    3. application.submission_timestamp <= affordability_check.check_timestamp
+    4. affordability_check.check_timestamp <= decision.decision_timestamp (DECISION_PRECEDES_CHECKS)
+    5. decision.decision_timestamp <= disbursement_event.timestamp
+
+    Detects temporal inversions across all transitions.
     """
     app_map = {a.application_id: a for a in dataset.applications}
     aff_map = {c.application_id: c for c in dataset.affordability_checks}
     dec_map = {d.application_id: d for d in dataset.decisions}
 
     temporal_inversions = []
-    total_audited = len(dataset.decisions)
+    total_audited = len(dataset.applications)
 
+    # 1 & 2: Document upload and verification ordering
+    for doc in dataset.documents:
+        app = app_map.get(doc.application_id)
+        if app and doc.uploaded_at < app.submission_timestamp:
+            temporal_inversions.append({
+                "application_id": doc.application_id,
+                "rule": "DOCUMENT_UPLOAD_PRECEDES_SUBMISSION",
+                "document_id": doc.document_id,
+                "submission_time": str(app.submission_timestamp),
+                "upload_time": str(doc.uploaded_at),
+                "delta_minutes": round((app.submission_timestamp - doc.uploaded_at).total_seconds() / 60.0, 1),
+                "details": f"Document {doc.document_id} uploaded before application submission",
+            })
+        if doc.verified_at and doc.verified_at < doc.uploaded_at:
+            temporal_inversions.append({
+                "application_id": doc.application_id,
+                "rule": "DOCUMENT_VERIFICATION_PRECEDES_UPLOAD",
+                "document_id": doc.document_id,
+                "upload_time": str(doc.uploaded_at),
+                "verified_time": str(doc.verified_at),
+                "delta_minutes": round((doc.uploaded_at - doc.verified_at).total_seconds() / 60.0, 1),
+                "details": f"Document {doc.document_id} verified before upload",
+            })
+
+    # 3: Affordability check vs submission
+    for aff in dataset.affordability_checks:
+        app = app_map.get(aff.application_id)
+        if app and aff.check_timestamp < app.submission_timestamp:
+            temporal_inversions.append({
+                "application_id": aff.application_id,
+                "rule": "AFFORDABILITY_PRECEDES_SUBMISSION",
+                "check_id": aff.check_id,
+                "submission_time": str(app.submission_timestamp),
+                "affordability_time": str(aff.check_timestamp),
+                "delta_minutes": round((app.submission_timestamp - aff.check_timestamp).total_seconds() / 60.0, 1),
+                "details": f"Affordability check {aff.check_id} precedes application submission",
+            })
+
+    # 4: Decision vs Affordability check (detects DECISION_PRECEDES_CHECKS)
     for app_id, dec in dec_map.items():
         aff = aff_map.get(app_id)
-        app = app_map.get(app_id)
-        if not aff or not app:
+        if not aff:
             continue
-
-        # Rule: decision should not precede affordability check
         if dec.decision_timestamp < aff.check_timestamp:
             temporal_inversions.append({
                 "application_id": app_id,
+                "rule": "DECISION_PRECEDES_AFFORDABILITY",
                 "affordability_time": str(aff.check_timestamp),
                 "decision_time": str(dec.decision_timestamp),
                 "delta_minutes": round((aff.check_timestamp - dec.decision_timestamp).total_seconds() / 60.0, 1),
+                "details": f"Decision {dec.decision_id} rendered before affordability check {aff.check_id}",
             })
+
+    # 5: Disbursement vs Decision
+    for evt in dataset.application_events:
+        if evt.event_type == EventType.FUNDS_DISBURSED:
+            dec = dec_map.get(evt.application_id)
+            if dec and evt.timestamp < dec.decision_timestamp:
+                temporal_inversions.append({
+                    "application_id": evt.application_id,
+                    "rule": "DISBURSEMENT_PRECEDES_DECISION",
+                    "event_id": evt.event_id,
+                    "decision_time": str(dec.decision_timestamp),
+                    "disbursement_time": str(evt.timestamp),
+                    "delta_minutes": round((dec.decision_timestamp - evt.timestamp).total_seconds() / 60.0, 1),
+                    "details": f"Disbursement event {evt.event_id} precedes decision {dec.decision_id}",
+                })
 
     return {
         "total_audited": total_audited,

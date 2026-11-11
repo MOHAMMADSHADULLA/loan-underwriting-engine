@@ -1,6 +1,6 @@
 # Loan Underwriting Engine — Validation & Audit Report
 
-**Report Generation Date:** 2026-11-11T17:30:01.575709  
+**Report Generation Date:** 2026-11-11T17:57:42.814653  
 **Evaluated Dataset:** {'products': 4, 'applicants': 100, 'employments': 100, 'income_records': 116, 'credit_facilities': 185, 'applications': 60, 'documents': 240, 'affordability_checks': 60, 'decisions': 60, 'repayment_schedules': 1140, 'application_events': 265, 'ground_truth_entries': 64}
 
 ---
@@ -9,7 +9,7 @@
 
 | Integrity Check Suite | Status | Key Metrics |
 | :--- | :---: | :--- |
-| **Primary Key Uniqueness** | `PASS` | 100% Unique across all 11 relational entities |
+| **Primary Key Uniqueness** | `PASS` | 100% Unique across all 12 relational and audit entities |
 | **Foreign Key Referential Integrity** | `PASS` | 0 orphan records; 100% valid parent relationships |
 | **Fair Lending Input Guardrail** | `PASS` | 0 protected demographic attributes accessible to underwriting rules |
 | **Term-Bound Validation** | `AUDITED` | 2 out-of-bounds term edge cases detected |
@@ -90,6 +90,12 @@ All generated entities maintain strict primary key uniqueness constraints:
     "unique_keys": 265,
     "duplicates": 0,
     "passed": true
+  },
+  "ground_truth": {
+    "total_records": 64,
+    "unique_keys": 64,
+    "duplicates": 0,
+    "passed": true
   }
 }
 ```
@@ -126,6 +132,11 @@ All child entities reference strictly existing parent keys:
     "passed": true
   },
   "documents.application_id": {
+    "total_fk_refs": 240,
+    "missing_parent_refs": 0,
+    "passed": true
+  },
+  "documents.applicant_id": {
     "total_fk_refs": 240,
     "missing_parent_refs": 0,
     "passed": true
@@ -185,7 +196,7 @@ All child entities reference strictly existing parent keys:
 ---
 
 ## 7. Temporal Consistency & Date Ordering Audit
-- **Audited Decision Timestamps:** `60`
+- **Audited Applications (Full Lifecycle):** `60`
 - **Temporal Inversions Detected:** `2`
 - **Ground Truth Match:** Detected count `2` equals expected `2`.
 

@@ -30,7 +30,7 @@ def export_validation_summary_markdown(report: Dict[str, Any], output_path: Path
 
 | Integrity Check Suite | Status | Key Metrics |
 | :--- | :---: | :--- |
-| **Primary Key Uniqueness** | `{'PASS' if pk_res['overall_passed'] else 'FAIL'}` | 100% Unique across all 11 relational entities |
+| **Primary Key Uniqueness** | `{'PASS' if pk_res['overall_passed'] else 'FAIL'}` | 100% Unique across all 12 relational and audit entities |
 | **Foreign Key Referential Integrity** | `{'PASS' if fk_res['overall_passed'] else 'FAIL'}` | 0 orphan records; 100% valid parent relationships |
 | **Fair Lending Input Guardrail** | `{'PASS' if fair_res['passed'] else 'FAIL'}` | 0 protected demographic attributes accessible to underwriting rules |
 | **Term-Bound Validation** | `AUDITED` | {term_res['violations_count']} out-of-bounds term edge cases detected |
@@ -88,7 +88,7 @@ All child entities reference strictly existing parent keys:
 ---
 
 ## 7. Temporal Consistency & Date Ordering Audit
-- **Audited Decision Timestamps:** `{order_res['total_audited']}`
+- **Audited Applications (Full Lifecycle):** `{order_res['total_audited']}`
 - **Temporal Inversions Detected:** `{order_res['temporal_inversions_count']}`
 - **Ground Truth Match:** Detected count `{order_res['temporal_inversions_count']}` equals expected `{edge_res['expected_temporal_inversions']}`.
 

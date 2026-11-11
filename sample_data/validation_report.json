@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T17:30:01.575709",
+  "generated_at": "2026-11-11T17:57:42.814653",
   "dataset_summary": {
     "products": 4,
     "applicants": 100,
@@ -82,6 +82,12 @@
         "unique_keys": 265,
         "duplicates": 0,
         "passed": true
+      },
+      "ground_truth": {
+        "total_records": 64,
+        "unique_keys": 64,
+        "duplicates": 0,
+        "passed": true
       }
     }
   },
@@ -118,6 +124,11 @@
         "missing_parent_refs": 0,
         "passed": true
       },
+      "documents.applicant_id": {
+        "total_fk_refs": 240,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
       "affordability_checks.application_id": {
         "total_fk_refs": 60,
         "missing_parent_refs": 0,
@@ -146,15 +157,19 @@
     "inversions": [
       {
         "application_id": "LOAN-2026-000020",
+        "rule": "DECISION_PRECEDES_AFFORDABILITY",
         "affordability_time": "2026-06-27 11:41:17",
         "decision_time": "2026-06-27 08:26:17",
-        "delta_minutes": 195.0
+        "delta_minutes": 195.0,
+        "details": "Decision DEC-LOAN-2026-000020-01 rendered before affordability check AFF-LOAN-2026-000020-01"
       },
       {
         "application_id": "LOAN-2026-000025",
+        "rule": "DECISION_PRECEDES_AFFORDABILITY",
         "affordability_time": "2026-05-31 00:47:04",
         "decision_time": "2026-05-30 21:32:04",
-        "delta_minutes": 195.0
+        "delta_minutes": 195.0,
+        "details": "Decision DEC-LOAN-2026-000025-01 rendered before affordability check AFF-LOAN-2026-000025-01"
       }
     ],
     "passed": false
