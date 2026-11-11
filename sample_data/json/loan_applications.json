@@ -658,7 +658,7 @@
     "purpose": "BUSINESS_EXPANSION",
     "application_status": "REJECTED",
     "credit_score": 714,
-    "declared_monthly_income": 6952.93,
+    "declared_monthly_income": 1737.58,
     "submission_timestamp": "2026-07-14T09:56:12",
     "updated_at": "2026-07-14T11:32:12"
   },
@@ -736,7 +736,7 @@
     "purpose": "HOME_IMPROVEMENT",
     "application_status": "REJECTED",
     "credit_score": 688,
-    "declared_monthly_income": 1892.04,
+    "declared_monthly_income": 281.16,
     "submission_timestamp": "2026-03-03T13:36:02",
     "updated_at": "2026-03-03T15:13:02"
   },

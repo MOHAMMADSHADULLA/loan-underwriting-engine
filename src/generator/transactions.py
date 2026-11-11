@@ -129,6 +129,21 @@ def generate_transactional_dataset(
                 emp.is_current = True
                 emp.tenure_months = max(emp.tenure_months, 24)
 
+        # For income conflict edge cases, ensure applicant has a verified baseline income
+        # so that the 3.2x multiplier creates a clean, verifiable conflict against verified records
+        if app_idx in income_conflict_indices:
+            for inc in applicant_incs:
+                inc.verification_status = VerificationStatus.VERIFIED
+                if inc.net_monthly_amount <= 0:
+                    inc.net_monthly_amount = 3500.0
+                    inc.gross_monthly_amount = 4500.0
+
+        # Compute verified net monthly income matching the affordability calculation definition
+        verified_net_inc = sum(
+            inc.net_monthly_amount
+            for inc in applicant_incs
+            if inc.verification_status == VerificationStatus.VERIFIED
+        )
         total_net_inc = sum(inc.net_monthly_amount for inc in applicant_incs)
 
         # Baseline requested principal & term
@@ -154,8 +169,9 @@ def generate_transactional_dataset(
         submission_time = sample_datetime_between(rng, start_window, end_window)
         purpose = rng.choice(list(LoanPurpose))
 
-        # Declared income: normally within 5% of total income
-        declared_income = round(total_net_inc * rng.uniform(0.95, 1.05), 2)
+        # Declared income: normally within 5% of verified income (consistent with affordability definition)
+        base_income = verified_net_inc if verified_net_inc > 0 else total_net_inc
+        declared_income = round(base_income * rng.uniform(0.95, 1.05), 2)
 
         application = LoanApplication(
             application_id=app_id,
@@ -191,7 +207,7 @@ def generate_transactional_dataset(
         # Inject Edge Case 4: Income source conflict
         if app_idx in income_conflict_indices:
             application = edge_case_registry.inject_income_source_conflict(
-                application, total_net_inc
+                application, verified_net_inc
             )
 
         # Generate Documents

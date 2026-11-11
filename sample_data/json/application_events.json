@@ -2237,7 +2237,7 @@
     "event_type": "DECISION_RENDERED",
     "actor": "AUTOMATED_RULES_ENGINE",
     "timestamp": "2026-07-14T11:32:12",
-    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_INCOME_DOCUMENT_VERIFICATION|INCOME_DECLARED_VERIFIED_DISCREPANCY"
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_INCOME_DOCUMENT_VERIFICATION"
   },
   {
     "event_id": "EVT-LOAN-2026-000052-01",
@@ -2507,7 +2507,7 @@
     "event_type": "DECISION_RENDERED",
     "actor": "AUTOMATED_RULES_ENGINE",
     "timestamp": "2026-03-03T15:13:02",
-    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED|INCOME_DECLARED_VERIFIED_DISCREPANCY"
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED"
   },
   {
     "event_id": "EVT-LOAN-2026-000058-01",

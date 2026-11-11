@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T16:37:20.007882",
+  "generated_at": "2026-11-11T17:32:15.626527",
   "dataset_summary": {
     "products": 4,
     "applicants": 10000,
@@ -299,6 +299,171 @@
     "violations": [],
     "passed": true
   },
+  "term_bounds": {
+    "total_audited": 6000,
+    "violations_count": 10,
+    "violations": [
+      {
+        "application_id": "LOAN-2026-000010",
+        "product_id": "PROD-002",
+        "requested_term_months": 108,
+        "min_term_months": 24,
+        "max_term_months": 84,
+        "violation_type": "EXCEEDS_MAX_TERM"
+      },
+      {
+        "application_id": "LOAN-2026-000110",
+        "product_id": "PROD-002",
+        "requested_term_months": 108,
+        "min_term_months": 24,
+        "max_term_months": 84,
+        "violation_type": "EXCEEDS_MAX_TERM"
+      },
+      {
+        "application_id": "LOAN-2026-000210",
+        "product_id": "PROD-002",
+        "requested_term_months": 108,
+        "min_term_months": 24,
+        "max_term_months": 84,
+        "violation_type": "EXCEEDS_MAX_TERM"
+      },
+      {
+        "application_id": "LOAN-2026-000310",
+        "product_id": "PROD-002",
+        "requested_term_months": 108,
+        "min_term_months": 24,
+        "max_term_months": 84,
+        "violation_type": "EXCEEDS_MAX_TERM"
+      },
+      {
+        "application_id": "LOAN-2026-000410",
+        "product_id": "PROD-002",
+        "requested_term_months": 108,
+        "min_term_months": 24,
+        "max_term_months": 84,
+        "violation_type": "EXCEEDS_MAX_TERM"
+      },
+      {
+        "application_id": "LOAN-2026-000510",
+        "product_id": "PROD-002",
+        "requested_term_months": 108,
+        "min_term_months": 24,
+        "max_term_months": 84,
+        "violation_type": "EXCEEDS_MAX_TERM"
+      },
+      {
+        "application_id": "LOAN-2026-000610",
+        "product_id": "PROD-002",
+        "requested_term_months": 108,
+        "min_term_months": 24,
+        "max_term_months": 84,
+        "violation_type": "EXCEEDS_MAX_TERM"
+      },
+      {
+        "application_id": "LOAN-2026-000710",
+        "product_id": "PROD-002",
+        "requested_term_months": 108,
+        "min_term_months": 24,
+        "max_term_months": 84,
+        "violation_type": "EXCEEDS_MAX_TERM"
+      },
+      {
+        "application_id": "LOAN-2026-000810",
+        "product_id": "PROD-002",
+        "requested_term_months": 108,
+        "min_term_months": 24,
+        "max_term_months": 84,
+        "violation_type": "EXCEEDS_MAX_TERM"
+      },
+      {
+        "application_id": "LOAN-2026-000910",
+        "product_id": "PROD-002",
+        "requested_term_months": 108,
+        "min_term_months": 24,
+        "max_term_months": 84,
+        "violation_type": "EXCEEDS_MAX_TERM"
+      }
+    ],
+    "passed": false
+  },
+  "income_source_conflicts": {
+    "total_audited": 6000,
+    "discrepancy_threshold": 0.4,
+    "violations_count": 10,
+    "violations": [
+      {
+        "application_id": "LOAN-2026-000015",
+        "applicant_id": "APP-2026-000015",
+        "declared_monthly_income": 4945.92,
+        "verified_monthly_income": 1545.6,
+        "discrepancy_ratio": 2.2
+      },
+      {
+        "application_id": "LOAN-2026-000115",
+        "applicant_id": "APP-2026-000115",
+        "declared_monthly_income": 22808.06,
+        "verified_monthly_income": 7127.52,
+        "discrepancy_ratio": 2.2
+      },
+      {
+        "application_id": "LOAN-2026-000215",
+        "applicant_id": "APP-2026-000215",
+        "declared_monthly_income": 9060.51,
+        "verified_monthly_income": 2831.41,
+        "discrepancy_ratio": 2.2
+      },
+      {
+        "application_id": "LOAN-2026-000315",
+        "applicant_id": "APP-2026-000315",
+        "declared_monthly_income": 10130.4,
+        "verified_monthly_income": 3165.75,
+        "discrepancy_ratio": 2.2
+      },
+      {
+        "application_id": "LOAN-2026-000415",
+        "applicant_id": "APP-2026-000415",
+        "declared_monthly_income": 20043.2,
+        "verified_monthly_income": 6263.5,
+        "discrepancy_ratio": 2.2
+      },
+      {
+        "application_id": "LOAN-2026-000515",
+        "applicant_id": "APP-2026-000515",
+        "declared_monthly_income": 20019.74,
+        "verified_monthly_income": 6256.17,
+        "discrepancy_ratio": 2.2
+      },
+      {
+        "application_id": "LOAN-2026-000615",
+        "applicant_id": "APP-2026-000615",
+        "declared_monthly_income": 8333.22,
+        "verified_monthly_income": 2604.13,
+        "discrepancy_ratio": 2.2
+      },
+      {
+        "application_id": "LOAN-2026-000715",
+        "applicant_id": "APP-2026-000715",
+        "declared_monthly_income": 13776.38,
+        "verified_monthly_income": 4305.12,
+        "discrepancy_ratio": 2.2
+      },
+      {
+        "application_id": "LOAN-2026-000815",
+        "applicant_id": "APP-2026-000815",
+        "declared_monthly_income": 8716.83,
+        "verified_monthly_income": 2724.01,
+        "discrepancy_ratio": 2.2
+      },
+      {
+        "application_id": "LOAN-2026-000915",
+        "applicant_id": "APP-2026-000915",
+        "declared_monthly_income": 10944.32,
+        "verified_monthly_income": 3420.1,
+        "discrepancy_ratio": 2.2
+      }
+    ],
+    "passed": false
+  },
   "ground_truth_reconciliation": {
     "expected_temporal_inversions": 10,
     "detected_temporal_inversions": 10,
@@ -307,7 +472,9 @@
     "expected_duplicate_disbursements": 10,
     "detected_duplicate_disbursements": 10,
     "expected_term_out_of_bounds": 10,
+    "detected_term_out_of_bounds": 10,
     "expected_income_source_conflicts": 10,
+    "detected_income_source_conflicts": 10,
     "match": true
   }
 }

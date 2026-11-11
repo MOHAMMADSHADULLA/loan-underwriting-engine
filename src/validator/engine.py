@@ -13,8 +13,10 @@ from src.validator.rules import (
     check_disbursement_integrity,
     check_fair_lending_compliance,
     check_foreign_key_integrity,
+    check_income_source_conflicts,
     check_primary_key_uniqueness,
     check_schedule_arithmetic_reconciliation,
+    check_term_bounds,
 )
 
 
@@ -34,6 +36,8 @@ def run_full_validation_suite(
     sched_res = check_schedule_arithmetic_reconciliation(dataset)
     disb_res = check_disbursement_integrity(dataset)
     fair_res = check_fair_lending_compliance(dataset)
+    term_res = check_term_bounds(dataset)
+    income_res = check_income_source_conflicts(dataset)
 
     # Reconcile detected anomalies against ground truth registry
     gt_temporal = [gt for gt in dataset.ground_truth if gt.issue_type == IssueType.DECISION_PRECEDES_CHECKS]
@@ -50,11 +54,15 @@ def run_full_validation_suite(
         "expected_duplicate_disbursements": len(gt_disb),
         "detected_duplicate_disbursements": disb_res["duplicate_disbursements_count"],
         "expected_term_out_of_bounds": len(gt_term),
+        "detected_term_out_of_bounds": term_res["violations_count"],
         "expected_income_source_conflicts": len(gt_income),
+        "detected_income_source_conflicts": income_res["violations_count"],
         "match": (
             len(gt_temporal) == order_res["temporal_inversions_count"]
             and len(gt_sched) == sched_res["discrepancies_count"]
             and len(gt_disb) == disb_res["duplicate_disbursements_count"]
+            and len(gt_term) == term_res["violations_count"]
+            and len(gt_income) == income_res["violations_count"]
         ),
     }
 
@@ -67,6 +75,8 @@ def run_full_validation_suite(
         "schedule_reconciliation": sched_res,
         "disbursement_integrity": disb_res,
         "fair_lending_compliance": fair_res,
+        "term_bounds": term_res,
+        "income_source_conflicts": income_res,
         "ground_truth_reconciliation": ground_truth_reconciliation,
     }
 

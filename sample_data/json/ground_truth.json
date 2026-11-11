@@ -546,7 +546,7 @@
     "issue_type": "NONE",
     "is_anomaly": false,
     "expected_decision": "REJECTED",
-    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_INCOME_DOCUMENT_VERIFICATION|INCOME_DECLARED_VERIFIED_DISCREPANCY",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_INCOME_DOCUMENT_VERIFICATION",
     "description": "Valid standard workflow application obeying all domain rules."
   },
   {
@@ -606,7 +606,7 @@
     "issue_type": "NONE",
     "is_anomaly": false,
     "expected_decision": "REJECTED",
-    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED|INCOME_DECLARED_VERIFIED_DISCREPANCY",
+    "rule_triggered": "FAIL_AFFORDABILITY_DTI_EXCEEDED",
     "description": "Valid standard workflow application obeying all domain rules."
   },
   {

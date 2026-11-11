@@ -606,7 +606,7 @@
     "approved_principal": 0.0,
     "approved_term_months": 0,
     "approved_interest_rate": 0.0,
-    "decision_reason_codes": "FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_INCOME_DOCUMENT_VERIFICATION|INCOME_DECLARED_VERIFIED_DISCREPANCY",
+    "decision_reason_codes": "FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_INCOME_DOCUMENT_VERIFICATION",
     "decision_notes": "Rejected due to policy threshold failures: FAIL_AFFORDABILITY_DTI_EXCEEDED.",
     "reviewer_role": "AUTOMATED_RULES_ENGINE",
     "decision_timestamp": "2026-07-14T11:32:12"
@@ -678,7 +678,7 @@
     "approved_principal": 0.0,
     "approved_term_months": 0,
     "approved_interest_rate": 0.0,
-    "decision_reason_codes": "FAIL_AFFORDABILITY_DTI_EXCEEDED|INCOME_DECLARED_VERIFIED_DISCREPANCY",
+    "decision_reason_codes": "FAIL_AFFORDABILITY_DTI_EXCEEDED",
     "decision_notes": "Rejected due to policy threshold failures: FAIL_AFFORDABILITY_DTI_EXCEEDED.",
     "reviewer_role": "AUTOMATED_RULES_ENGINE",
     "decision_timestamp": "2026-03-03T15:13:02"

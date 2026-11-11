@@ -53,13 +53,13 @@ LOAN-2026-000047,LoanApplication,LOAN-2026-000047,NONE,False,REJECTED,FAIL_AFFOR
 LOAN-2026-000048,LoanApplication,LOAN-2026-000048,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
 LOAN-2026-000049,LoanApplication,LOAN-2026-000049,NONE,False,MANUAL_REVIEW,PENDING_INCOME_DOCUMENT_VERIFICATION,Valid standard workflow application obeying all domain rules.
 LOAN-2026-000050,LoanApplication,LOAN-2026-000050,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED|FAIL_UNSTABLE_EMPLOYMENT_NO_INCOME|PENDING_INCOME_DOCUMENT_VERIFICATION,Valid standard workflow application obeying all domain rules.
-LOAN-2026-000051,LoanApplication,LOAN-2026-000051,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_INCOME_DOCUMENT_VERIFICATION|INCOME_DECLARED_VERIFIED_DISCREPANCY,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000051,LoanApplication,LOAN-2026-000051,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_INCOME_DOCUMENT_VERIFICATION,Valid standard workflow application obeying all domain rules.
 LOAN-2026-000052,LoanApplication,LOAN-2026-000052,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
 LOAN-2026-000053,LoanApplication,LOAN-2026-000053,NONE,False,MANUAL_REVIEW,MARGINAL_AFFORDABILITY_BUFFER,Valid standard workflow application obeying all domain rules.
 LOAN-2026-000054,LoanApplication,LOAN-2026-000054,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
 LOAN-2026-000055,LoanApplication,LOAN-2026-000055,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED,Valid standard workflow application obeying all domain rules.
 LOAN-2026-000056,LoanApplication,LOAN-2026-000056,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
-LOAN-2026-000057,LoanApplication,LOAN-2026-000057,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED|INCOME_DECLARED_VERIFIED_DISCREPANCY,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000057,LoanApplication,LOAN-2026-000057,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED,Valid standard workflow application obeying all domain rules.
 LOAN-2026-000058,LoanApplication,LOAN-2026-000058,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
 LOAN-2026-000059,LoanApplication,LOAN-2026-000059,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
 LOAN-2026-000060,LoanApplication,LOAN-2026-000060,NONE,False,MANUAL_REVIEW,PENDING_IDENTITY_VERIFICATION,Valid standard workflow application obeying all domain rules.

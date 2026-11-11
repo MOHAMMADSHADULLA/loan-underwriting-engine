@@ -57,6 +57,7 @@ def main():
     rep_parser.add_argument("--seed", type=int, default=20261022, help="Seed to test reproducibility")
     rep_parser.add_argument("--applicants", type=int, default=100, help="Test applicant count")
     rep_parser.add_argument("--applications", type=int, default=60, help="Test application count")
+    rep_parser.add_argument("--edge-cases", type=int, default=None, help="Number of edge cases per type")
 
     args = parser.parse_args()
 
@@ -123,10 +124,15 @@ def main():
         out_path = Path(args.out_dir)
         report = run_full_validation_suite(dataset, out_path)
         print("\nValidation Results Summary:")
-        print(f"  - Primary Key Uniqueness: {'PASSED' if report['primary_key_uniqueness']['overall_passed'] else 'FAILED'}")
-        print(f"  - Foreign Key Integrity:  {'PASSED' if report['foreign_key_integrity']['overall_passed'] else 'FAILED'}")
-        print(f"  - Fair Lending Guardrail: {'PASSED' if report['fair_lending_compliance']['passed'] else 'FAILED'}")
-        print(f"  - Ground Truth Parity:    {'PASSED' if report['ground_truth_reconciliation']['match'] else 'FAILED'}")
+        print(f"  - Primary Key Uniqueness:          {'PASSED' if report['primary_key_uniqueness']['overall_passed'] else 'FAILED'}")
+        print(f"  - Foreign Key Integrity:           {'PASSED' if report['foreign_key_integrity']['overall_passed'] else 'FAILED'}")
+        print(f"  - Fair Lending Guardrail:          {'PASSED' if report['fair_lending_compliance']['passed'] else 'FAILED'}")
+        print(f"  - Term-Bound Validation:           {'AUDITED' if report['term_bounds']['violations_count'] > 0 else 'PASSED'} ({report['term_bounds']['violations_count']} detected)")
+        print(f"  - Income Conflict Validation:      {'AUDITED' if report['income_source_conflicts']['violations_count'] > 0 else 'PASSED'} ({report['income_source_conflicts']['violations_count']} detected)")
+        print(f"  - Date Ordering (Temporal):        {'AUDITED' if report['date_ordering']['temporal_inversions_count'] > 0 else 'PASSED'} ({report['date_ordering']['temporal_inversions_count']} detected)")
+        print(f"  - Schedule Reconciliation:         {'AUDITED' if report['schedule_reconciliation']['discrepancies_count'] > 0 else 'PASSED'} ({report['schedule_reconciliation']['discrepancies_count']} detected)")
+        print(f"  - Duplicate Disbursement Guard:    {'AUDITED' if report['disbursement_integrity']['duplicate_disbursements_count'] > 0 else 'PASSED'} ({report['disbursement_integrity']['duplicate_disbursements_count']} detected)")
+        print(f"  - Ground Truth Parity (5/5 Match): {'PASSED (ALL 5 RECONCILED)' if report['ground_truth_reconciliation']['match'] else 'FAILED'}")
         print(f"Detailed report saved to: {out_path / 'VALIDATION_SUMMARY.md'}")
 
     elif args.command == "verify-reproducibility":
@@ -135,6 +141,7 @@ def main():
             seed=args.seed,
             num_applicants=args.applicants,
             num_applications=args.applications,
+            num_edge_cases=args.edge_cases,
         )
 
         print("\n" + "=" * 80)

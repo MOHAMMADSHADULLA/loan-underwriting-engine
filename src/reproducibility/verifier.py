@@ -3,7 +3,7 @@
 import hashlib
 import json
 from pathlib import Path
-from typing import Any, Dict
+from typing import Any, Dict, Optional
 
 from src.generator.engine import generate_dataset
 
@@ -17,11 +17,14 @@ def verify_reproducibility(
     seed: int = 20261022,
     num_applicants: int = 100,
     num_applications: int = 60,
-    num_edge_cases: int = 2,
+    num_edge_cases: Optional[int] = None,
 ) -> Dict[str, Any]:
     """
     Generates two separate runs with identical seed and compares row counts and SHA-256 checksums.
     """
+    if num_edge_cases is None:
+        num_edge_cases = 10 if num_applications >= 1000 else 2
+
     # Run 1
     ds1 = generate_dataset(
         num_applicants=num_applicants,

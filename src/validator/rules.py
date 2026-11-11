@@ -4,7 +4,13 @@ from collections import Counter, defaultdict
 from datetime import datetime
 from typing import Any, Dict, List, Set, Tuple
 
-from src.domain.enums import ApplicationStatus, DecisionOutcome, EventType, IssueType
+from src.domain.enums import (
+    ApplicationStatus,
+    DecisionOutcome,
+    EventType,
+    IssueType,
+    VerificationStatus,
+)
 from src.generator.engine import GeneratedDataset
 from src.rules.compliance import PROTECTED_ATTRIBUTES
 
@@ -202,3 +208,101 @@ def check_fair_lending_compliance(dataset: GeneratedDataset) -> Dict[str, Any]:
         "violations": violations,
         "passed": len(violations) == 0,
     }
+
+
+def check_term_bounds(dataset: GeneratedDataset) -> Dict[str, Any]:
+    """
+    Validates that requested_term_months for each loan application
+    is within the associated loan product's min_term_months and max_term_months.
+    Detects TERM_OUT_OF_BOUNDS edge cases.
+    """
+    product_map = {p.product_id: p for p in dataset.products}
+    violations = []
+    total_audited = len(dataset.applications)
+
+    for app in dataset.applications:
+        product = product_map.get(app.product_id)
+        if not product:
+            # Missing product references are handled separately by foreign-key integrity validation
+            continue
+
+        if (
+            app.requested_term_months < product.min_term_months
+            or app.requested_term_months > product.max_term_months
+        ):
+            violations.append({
+                "application_id": app.application_id,
+                "product_id": app.product_id,
+                "requested_term_months": app.requested_term_months,
+                "min_term_months": product.min_term_months,
+                "max_term_months": product.max_term_months,
+                "violation_type": (
+                    "EXCEEDS_MAX_TERM"
+                    if app.requested_term_months > product.max_term_months
+                    else "BELOW_MIN_TERM"
+                ),
+            })
+
+    return {
+        "total_audited": total_audited,
+        "violations_count": len(violations),
+        "violations": violations,
+        "passed": len(violations) == 0,
+    }
+
+
+def check_income_source_conflicts(
+    dataset: GeneratedDataset,
+    discrepancy_threshold: float = 0.40,
+) -> Dict[str, Any]:
+    """
+    Validates that declared monthly income on each loan application
+    does not conflict with the applicant's verified monthly income.
+    
+    Uses the exact verified-income definition from affordability calculation:
+    sum of net_monthly_amount for records with verification_status == VERIFIED.
+    Matches applications strictly to their own applicant's income records.
+    Safely handles zero or missing verified income without division-by-zero.
+    Detects INCOME_SOURCE_CONFLICT edge cases.
+    """
+    income_by_applicant: Dict[str, List[Any]] = defaultdict(list)
+    for inc in dataset.income_records:
+        income_by_applicant[inc.applicant_id].append(inc)
+
+    violations = []
+    total_audited = len(dataset.applications)
+
+    for app in dataset.applications:
+        applicant_incs = income_by_applicant.get(app.applicant_id, [])
+        verified_monthly_income = sum(
+            inc.net_monthly_amount
+            for inc in applicant_incs
+            if inc.verification_status == VerificationStatus.VERIFIED
+        )
+
+        # Safe handling for zero or unverified income
+        if verified_monthly_income <= 0:
+            continue
+
+        discrepancy_ratio = round(
+            abs(app.declared_monthly_income - verified_monthly_income) / verified_monthly_income,
+            4,
+        )
+
+        if discrepancy_ratio > discrepancy_threshold:
+            violations.append({
+                "application_id": app.application_id,
+                "applicant_id": app.applicant_id,
+                "declared_monthly_income": app.declared_monthly_income,
+                "verified_monthly_income": round(verified_monthly_income, 2),
+                "discrepancy_ratio": discrepancy_ratio,
+            })
+
+    return {
+        "total_audited": total_audited,
+        "discrepancy_threshold": discrepancy_threshold,
+        "violations_count": len(violations),
+        "violations": violations,
+        "passed": len(violations) == 0,
+    }
+

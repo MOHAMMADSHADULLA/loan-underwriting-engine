@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T16:37:55.703189",
+  "generated_at": "2026-11-11T17:30:01.575709",
   "dataset_summary": {
     "products": 4,
     "applicants": 100,
@@ -195,6 +195,51 @@
     "violations": [],
     "passed": true
   },
+  "term_bounds": {
+    "total_audited": 60,
+    "violations_count": 2,
+    "violations": [
+      {
+        "application_id": "LOAN-2026-000010",
+        "product_id": "PROD-002",
+        "requested_term_months": 108,
+        "min_term_months": 24,
+        "max_term_months": 84,
+        "violation_type": "EXCEEDS_MAX_TERM"
+      },
+      {
+        "application_id": "LOAN-2026-000015",
+        "product_id": "PROD-003",
+        "requested_term_months": 96,
+        "min_term_months": 12,
+        "max_term_months": 72,
+        "violation_type": "EXCEEDS_MAX_TERM"
+      }
+    ],
+    "passed": false
+  },
+  "income_source_conflicts": {
+    "total_audited": 60,
+    "discrepancy_threshold": 0.4,
+    "violations_count": 2,
+    "violations": [
+      {
+        "application_id": "LOAN-2026-000015",
+        "applicant_id": "APP-2026-000015",
+        "declared_monthly_income": 4945.92,
+        "verified_monthly_income": 1545.6,
+        "discrepancy_ratio": 2.2
+      },
+      {
+        "application_id": "LOAN-2026-000020",
+        "applicant_id": "APP-2026-000020",
+        "declared_monthly_income": 12307.3,
+        "verified_monthly_income": 3846.03,
+        "discrepancy_ratio": 2.2
+      }
+    ],
+    "passed": false
+  },
   "ground_truth_reconciliation": {
     "expected_temporal_inversions": 2,
     "detected_temporal_inversions": 2,
@@ -203,7 +248,9 @@
     "expected_duplicate_disbursements": 2,
     "detected_duplicate_disbursements": 2,
     "expected_term_out_of_bounds": 2,
+    "detected_term_out_of_bounds": 2,
     "expected_income_source_conflicts": 2,
+    "detected_income_source_conflicts": 2,
     "match": true
   }
 }
