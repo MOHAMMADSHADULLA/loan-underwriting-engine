@@ -1,0 +1,313 @@
+{
+  "generated_at": "2026-11-11T16:37:20.007882",
+  "dataset_summary": {
+    "products": 4,
+    "applicants": 10000,
+    "employments": 10000,
+    "income_records": 11919,
+    "credit_facilities": 18103,
+    "applications": 6000,
+    "documents": 24000,
+    "affordability_checks": 6000,
+    "decisions": 6000,
+    "repayment_schedules": 92232,
+    "application_events": 25878,
+    "ground_truth_entries": 6000
+  },
+  "primary_key_uniqueness": {
+    "overall_passed": true,
+    "details": {
+      "loan_products": {
+        "total_records": 4,
+        "unique_keys": 4,
+        "duplicates": 0,
+        "passed": true
+      },
+      "applicants": {
+        "total_records": 10000,
+        "unique_keys": 10000,
+        "duplicates": 0,
+        "passed": true
+      },
+      "employments": {
+        "total_records": 10000,
+        "unique_keys": 10000,
+        "duplicates": 0,
+        "passed": true
+      },
+      "income_records": {
+        "total_records": 11919,
+        "unique_keys": 11919,
+        "duplicates": 0,
+        "passed": true
+      },
+      "credit_facilities": {
+        "total_records": 18103,
+        "unique_keys": 18103,
+        "duplicates": 0,
+        "passed": true
+      },
+      "loan_applications": {
+        "total_records": 6000,
+        "unique_keys": 6000,
+        "duplicates": 0,
+        "passed": true
+      },
+      "documents": {
+        "total_records": 24000,
+        "unique_keys": 24000,
+        "duplicates": 0,
+        "passed": true
+      },
+      "affordability_checks": {
+        "total_records": 6000,
+        "unique_keys": 6000,
+        "duplicates": 0,
+        "passed": true
+      },
+      "decisions": {
+        "total_records": 6000,
+        "unique_keys": 6000,
+        "duplicates": 0,
+        "passed": true
+      },
+      "repayment_schedules": {
+        "total_records": 92232,
+        "unique_keys": 92232,
+        "duplicates": 0,
+        "passed": true
+      },
+      "application_events": {
+        "total_records": 25878,
+        "unique_keys": 25878,
+        "duplicates": 0,
+        "passed": true
+      }
+    }
+  },
+  "foreign_key_integrity": {
+    "overall_passed": true,
+    "details": {
+      "employments.applicant_id": {
+        "total_fk_refs": 10000,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "income_records.applicant_id": {
+        "total_fk_refs": 11919,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "credit_facilities.applicant_id": {
+        "total_fk_refs": 18103,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "loan_applications.applicant_id": {
+        "total_fk_refs": 6000,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "loan_applications.product_id": {
+        "total_fk_refs": 6000,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "documents.application_id": {
+        "total_fk_refs": 24000,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "affordability_checks.application_id": {
+        "total_fk_refs": 6000,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "decisions.application_id": {
+        "total_fk_refs": 6000,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "repayment_schedules.application_id": {
+        "total_fk_refs": 92232,
+        "missing_parent_refs": 0,
+        "passed": true
+      },
+      "application_events.application_id": {
+        "total_fk_refs": 25878,
+        "missing_parent_refs": 0,
+        "passed": true
+      }
+    }
+  },
+  "date_ordering": {
+    "total_audited": 6000,
+    "temporal_inversions_count": 10,
+    "inversions": [
+      {
+        "application_id": "LOAN-2026-000020",
+        "affordability_time": "2026-04-11 10:35:58",
+        "decision_time": "2026-04-11 07:20:58",
+        "delta_minutes": 195.0
+      },
+      {
+        "application_id": "LOAN-2026-000120",
+        "affordability_time": "2026-02-23 15:00:41",
+        "decision_time": "2026-02-23 11:45:41",
+        "delta_minutes": 195.0
+      },
+      {
+        "application_id": "LOAN-2026-000220",
+        "affordability_time": "2026-06-24 19:50:10",
+        "decision_time": "2026-06-24 16:35:10",
+        "delta_minutes": 195.0
+      },
+      {
+        "application_id": "LOAN-2026-000320",
+        "affordability_time": "2026-03-13 01:12:55",
+        "decision_time": "2026-03-12 21:57:55",
+        "delta_minutes": 195.0
+      },
+      {
+        "application_id": "LOAN-2026-000420",
+        "affordability_time": "2026-09-06 01:26:11",
+        "decision_time": "2026-09-05 22:11:11",
+        "delta_minutes": 195.0
+      },
+      {
+        "application_id": "LOAN-2026-000520",
+        "affordability_time": "2026-04-15 17:15:17",
+        "decision_time": "2026-04-15 14:00:17",
+        "delta_minutes": 195.0
+      },
+      {
+        "application_id": "LOAN-2026-000620",
+        "affordability_time": "2026-09-09 06:49:30",
+        "decision_time": "2026-09-09 03:34:30",
+        "delta_minutes": 195.0
+      },
+      {
+        "application_id": "LOAN-2026-000720",
+        "affordability_time": "2026-07-21 06:37:28",
+        "decision_time": "2026-07-21 03:22:28",
+        "delta_minutes": 195.0
+      },
+      {
+        "application_id": "LOAN-2026-000820",
+        "affordability_time": "2026-09-03 11:59:59",
+        "decision_time": "2026-09-03 08:44:59",
+        "delta_minutes": 195.0
+      },
+      {
+        "application_id": "LOAN-2026-000920",
+        "affordability_time": "2026-09-26 19:27:56",
+        "decision_time": "2026-09-26 16:12:56",
+        "delta_minutes": 195.0
+      }
+    ],
+    "passed": false
+  },
+  "schedule_reconciliation": {
+    "audited_schedules_count": 1868,
+    "discrepancies_count": 10,
+    "discrepancies": [
+      {
+        "application_id": "LOAN-2026-000025",
+        "approved_principal": 3000.0,
+        "scheduled_total": 3150.0,
+        "discrepancy": 150.0
+      },
+      {
+        "application_id": "LOAN-2026-000125",
+        "approved_principal": 3000.0,
+        "scheduled_total": 3150.0,
+        "discrepancy": 150.0
+      },
+      {
+        "application_id": "LOAN-2026-000225",
+        "approved_principal": 3000.0,
+        "scheduled_total": 3150.0,
+        "discrepancy": 150.0
+      },
+      {
+        "application_id": "LOAN-2026-000325",
+        "approved_principal": 3000.0,
+        "scheduled_total": 3150.0,
+        "discrepancy": 150.0
+      },
+      {
+        "application_id": "LOAN-2026-000425",
+        "approved_principal": 3000.0,
+        "scheduled_total": 3150.0,
+        "discrepancy": 150.0
+      },
+      {
+        "application_id": "LOAN-2026-000525",
+        "approved_principal": 3000.0,
+        "scheduled_total": 3150.0,
+        "discrepancy": 150.0
+      },
+      {
+        "application_id": "LOAN-2026-000625",
+        "approved_principal": 3000.0,
+        "scheduled_total": 3150.0,
+        "discrepancy": 150.0
+      },
+      {
+        "application_id": "LOAN-2026-000725",
+        "approved_principal": 3000.0,
+        "scheduled_total": 3150.0,
+        "discrepancy": 150.0
+      },
+      {
+        "application_id": "LOAN-2026-000825",
+        "approved_principal": 3000.0,
+        "scheduled_total": 3150.0,
+        "discrepancy": 150.0
+      },
+      {
+        "application_id": "LOAN-2026-000925",
+        "approved_principal": 3000.0,
+        "scheduled_total": 3150.0,
+        "discrepancy": 150.0
+      }
+    ],
+    "passed": false
+  },
+  "disbursement_integrity": {
+    "total_disbursement_events": 1878,
+    "duplicate_disbursements": [
+      "LOAN-2026-000030",
+      "LOAN-2026-000130",
+      "LOAN-2026-000230",
+      "LOAN-2026-000330",
+      "LOAN-2026-000430",
+      "LOAN-2026-000530",
+      "LOAN-2026-000630",
+      "LOAN-2026-000730",
+      "LOAN-2026-000830",
+      "LOAN-2026-000930"
+    ],
+    "duplicate_disbursements_count": 10,
+    "unapproved_disbursements": [],
+    "unapproved_disbursements_count": 0,
+    "passed": false
+  },
+  "fair_lending_compliance": {
+    "audited_decisions": 6000,
+    "violations_found": 0,
+    "violations": [],
+    "passed": true
+  },
+  "ground_truth_reconciliation": {
+    "expected_temporal_inversions": 10,
+    "detected_temporal_inversions": 10,
+    "expected_schedule_discrepancies": 10,
+    "detected_schedule_discrepancies": 10,
+    "expected_duplicate_disbursements": 10,
+    "detected_duplicate_disbursements": 10,
+    "expected_term_out_of_bounds": 10,
+    "expected_income_source_conflicts": 10,
+    "match": true
+  }
+}

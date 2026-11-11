@@ -1,0 +1,2652 @@
+[
+  {
+    "event_id": "EVT-LOAN-2026-000001-01",
+    "application_id": "LOAN-2026-000001",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-03T01:47:28",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000001-02",
+    "application_id": "LOAN-2026-000001",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-03T02:53:28",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000001-03",
+    "application_id": "LOAN-2026-000001",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-09-03T02:58:28",
+    "details": "DTI calculated: 10.27%, Net disposable: $3746.95, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000001-04",
+    "application_id": "LOAN-2026-000001",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-09-03T03:18:28",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000001-05",
+    "application_id": "LOAN-2026-000001",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-04T03:18:28",
+    "details": "Disbursement completed. Amount: $15000.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000002-01",
+    "application_id": "LOAN-2026-000002",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-07-13T19:39:46",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000002-02",
+    "application_id": "LOAN-2026-000002",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-07-13T20:31:46",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000002-03",
+    "application_id": "LOAN-2026-000002",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-07-13T20:36:46",
+    "details": "DTI calculated: 20.85%, Net disposable: $852.69, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000002-04",
+    "application_id": "LOAN-2026-000002",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-07-13T20:56:46",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000002-05",
+    "application_id": "LOAN-2026-000002",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-07-14T20:56:46",
+    "details": "Disbursement completed. Amount: $25100.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000003-01",
+    "application_id": "LOAN-2026-000003",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-05-13T04:14:08",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000003-02",
+    "application_id": "LOAN-2026-000003",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-05-13T05:18:08",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000003-03",
+    "application_id": "LOAN-2026-000003",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-05-13T05:23:08",
+    "details": "DTI calculated: 19.82%, Net disposable: $2886.62, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000003-04",
+    "application_id": "LOAN-2026-000003",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-05-13T05:43:08",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_CREDIT_SCORE_BELOW_MIN"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000004-01",
+    "application_id": "LOAN-2026-000004",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-24T23:45:14",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000004-02",
+    "application_id": "LOAN-2026-000004",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-25T00:36:14",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000004-03",
+    "application_id": "LOAN-2026-000004",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-06-25T00:41:14",
+    "details": "DTI calculated: 37.44%, Net disposable: $1170.74, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000004-04",
+    "application_id": "LOAN-2026-000004",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-06-25T01:01:14",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000004-05",
+    "application_id": "LOAN-2026-000004",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-26T01:01:14",
+    "details": "Disbursement completed. Amount: $24800.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000005-01",
+    "application_id": "LOAN-2026-000005",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-29T05:27:27",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000005-02",
+    "application_id": "LOAN-2026-000005",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-29T06:29:27",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000005-03",
+    "application_id": "LOAN-2026-000005",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-09-29T06:34:27",
+    "details": "DTI calculated: 17.78%, Net disposable: $4992.81, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000005-04",
+    "application_id": "LOAN-2026-000005",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "MANUAL_REVIEW",
+    "event_type": "DECISION_RENDERED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-29T06:54:27",
+    "details": "Decision rendered: MANUAL_REVIEW. Reasons: BORDERLINE_CREDIT_SCORE"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000006-01",
+    "application_id": "LOAN-2026-000006",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-24T22:17:18",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000006-02",
+    "application_id": "LOAN-2026-000006",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-24T23:13:18",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000006-03",
+    "application_id": "LOAN-2026-000006",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-08-24T23:18:18",
+    "details": "DTI calculated: 27.28%, Net disposable: $1644.86, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000006-04",
+    "application_id": "LOAN-2026-000006",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-08-24T23:38:18",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000006-05",
+    "application_id": "LOAN-2026-000006",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-25T23:38:18",
+    "details": "Disbursement completed. Amount: $27200.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000007-01",
+    "application_id": "LOAN-2026-000007",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-17T18:42:19",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000007-02",
+    "application_id": "LOAN-2026-000007",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-17T19:55:19",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000007-03",
+    "application_id": "LOAN-2026-000007",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-17T20:00:19",
+    "details": "DTI calculated: 64.35%, Net disposable: $-524.10, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000007-04",
+    "application_id": "LOAN-2026-000007",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-17T20:20:19",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED|BORDERLINE_CREDIT_SCORE"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000008-01",
+    "application_id": "LOAN-2026-000008",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-13T22:26:49",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000008-02",
+    "application_id": "LOAN-2026-000008",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-13T23:17:49",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000008-03",
+    "application_id": "LOAN-2026-000008",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-09-13T23:22:49",
+    "details": "DTI calculated: 50.46%, Net disposable: $253.90, Result: MARGINAL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000008-04",
+    "application_id": "LOAN-2026-000008",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "MANUAL_REVIEW",
+    "event_type": "DECISION_RENDERED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-13T23:42:49",
+    "details": "Decision rendered: MANUAL_REVIEW. Reasons: MARGINAL_AFFORDABILITY_BUFFER"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000009-01",
+    "application_id": "LOAN-2026-000009",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-05T02:47:51",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000009-02",
+    "application_id": "LOAN-2026-000009",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-05T03:52:51",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000009-03",
+    "application_id": "LOAN-2026-000009",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-09-05T03:57:51",
+    "details": "DTI calculated: 55.57%, Net disposable: $-373.57, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000009-04",
+    "application_id": "LOAN-2026-000009",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-09-05T04:17:51",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000010-01",
+    "application_id": "LOAN-2026-000010",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-05T01:32:10",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000010-02",
+    "application_id": "LOAN-2026-000010",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-05T02:31:10",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000010-03",
+    "application_id": "LOAN-2026-000010",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-06-05T02:36:10",
+    "details": "DTI calculated: 100.00%, Net disposable: $-1588.91, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000010-04",
+    "application_id": "LOAN-2026-000010",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-06-05T02:56:10",
+    "details": "Decision rendered: REJECTED. Reasons: ERR_TERM_OUT_OF_BOUNDS|FAIL_CREDIT_SCORE_BELOW_MIN|FAIL_AFFORDABILITY_DTI_EXCEEDED"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000011-01",
+    "application_id": "LOAN-2026-000011",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-14T17:57:31",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000011-02",
+    "application_id": "LOAN-2026-000011",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-14T19:03:31",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000011-03",
+    "application_id": "LOAN-2026-000011",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-09-14T19:08:31",
+    "details": "DTI calculated: 20.72%, Net disposable: $2644.84, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000011-04",
+    "application_id": "LOAN-2026-000011",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-09-14T19:28:31",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_CREDIT_SCORE_BELOW_MIN"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000012-01",
+    "application_id": "LOAN-2026-000012",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-24T11:49:29",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000012-02",
+    "application_id": "LOAN-2026-000012",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-24T12:48:29",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000012-03",
+    "application_id": "LOAN-2026-000012",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-09-24T12:53:29",
+    "details": "DTI calculated: 19.93%, Net disposable: $2147.62, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000012-04",
+    "application_id": "LOAN-2026-000012",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-09-24T13:13:29",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000012-05",
+    "application_id": "LOAN-2026-000012",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-25T13:13:29",
+    "details": "Disbursement completed. Amount: $55200.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000013-01",
+    "application_id": "LOAN-2026-000013",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-05T19:45:02",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000013-02",
+    "application_id": "LOAN-2026-000013",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-05T20:40:02",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000013-03",
+    "application_id": "LOAN-2026-000013",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-05T20:45:02",
+    "details": "DTI calculated: 11.97%, Net disposable: $1109.87, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000013-04",
+    "application_id": "LOAN-2026-000013",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-05T21:05:02",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000013-05",
+    "application_id": "LOAN-2026-000013",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-06T21:05:02",
+    "details": "Disbursement completed. Amount: $15300.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000014-01",
+    "application_id": "LOAN-2026-000014",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-29T10:15:02",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000014-02",
+    "application_id": "LOAN-2026-000014",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-29T11:05:02",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000014-03",
+    "application_id": "LOAN-2026-000014",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-06-29T11:10:02",
+    "details": "DTI calculated: 11.30%, Net disposable: $2303.44, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000014-04",
+    "application_id": "LOAN-2026-000014",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-06-29T11:30:02",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000014-05",
+    "application_id": "LOAN-2026-000014",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-30T11:30:02",
+    "details": "Disbursement completed. Amount: $17200.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000015-01",
+    "application_id": "LOAN-2026-000015",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-02-14T03:32:28",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000015-02",
+    "application_id": "LOAN-2026-000015",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-02-14T04:43:28",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000015-03",
+    "application_id": "LOAN-2026-000015",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-02-14T04:48:28",
+    "details": "DTI calculated: 109.25%, Net disposable: $-1474.83, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000015-04",
+    "application_id": "LOAN-2026-000015",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-02-14T05:08:28",
+    "details": "Decision rendered: REJECTED. Reasons: ERR_TERM_OUT_OF_BOUNDS|FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_IDENTITY_VERIFICATION|INCOME_DECLARED_VERIFIED_DISCREPANCY"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000016-01",
+    "application_id": "LOAN-2026-000016",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-15T20:41:33",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000016-02",
+    "application_id": "LOAN-2026-000016",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-15T21:47:33",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000016-03",
+    "application_id": "LOAN-2026-000016",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-03-15T21:52:33",
+    "details": "DTI calculated: 36.50%, Net disposable: $512.46, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000016-04",
+    "application_id": "LOAN-2026-000016",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-03-15T22:12:33",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000016-05",
+    "application_id": "LOAN-2026-000016",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-16T22:12:33",
+    "details": "Disbursement completed. Amount: $48300.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000017-01",
+    "application_id": "LOAN-2026-000017",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-16T04:59:17",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000017-02",
+    "application_id": "LOAN-2026-000017",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-16T06:13:17",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000017-03",
+    "application_id": "LOAN-2026-000017",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-16T06:18:17",
+    "details": "DTI calculated: 41.83%, Net disposable: $390.63, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000017-04",
+    "application_id": "LOAN-2026-000017",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-16T06:38:17",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_CREDIT_SCORE_BELOW_MIN"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000018-01",
+    "application_id": "LOAN-2026-000018",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-22T16:37:39",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000018-02",
+    "application_id": "LOAN-2026-000018",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-22T17:43:39",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000018-03",
+    "application_id": "LOAN-2026-000018",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-09-22T17:48:39",
+    "details": "DTI calculated: 32.49%, Net disposable: $866.88, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000018-04",
+    "application_id": "LOAN-2026-000018",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-09-22T18:08:39",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_CREDIT_SCORE_BELOW_MIN|PENDING_IDENTITY_VERIFICATION"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000019-01",
+    "application_id": "LOAN-2026-000019",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-06T23:37:53",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000019-02",
+    "application_id": "LOAN-2026-000019",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-07T00:30:53",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000019-03",
+    "application_id": "LOAN-2026-000019",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-06-07T00:35:53",
+    "details": "DTI calculated: 119.04%, Net disposable: $-3381.62, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000019-04",
+    "application_id": "LOAN-2026-000019",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-06-07T00:55:53",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_INCOME_DOCUMENT_VERIFICATION"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000020-01",
+    "application_id": "LOAN-2026-000020",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-27T10:23:17",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000020-02",
+    "application_id": "LOAN-2026-000020",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-27T11:36:17",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000020-03",
+    "application_id": "LOAN-2026-000020",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-06-27T11:41:17",
+    "details": "DTI calculated: 17.66%, Net disposable: $1489.84, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000020-04",
+    "application_id": "LOAN-2026-000020",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-06-27T08:26:17",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_CREDIT_SCORE_BELOW_MIN|INCOME_DECLARED_VERIFIED_DISCREPANCY"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000021-01",
+    "application_id": "LOAN-2026-000021",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-12T02:53:31",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000021-02",
+    "application_id": "LOAN-2026-000021",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-12T03:56:31",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000021-03",
+    "application_id": "LOAN-2026-000021",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-12T04:01:31",
+    "details": "DTI calculated: 25.05%, Net disposable: $1965.61, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000021-04",
+    "application_id": "LOAN-2026-000021",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-12T04:21:31",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000021-05",
+    "application_id": "LOAN-2026-000021",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-13T04:21:31",
+    "details": "Disbursement completed. Amount: $17900.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000022-01",
+    "application_id": "LOAN-2026-000022",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-02-28T15:41:15",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000022-02",
+    "application_id": "LOAN-2026-000022",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-02-28T16:48:15",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000022-03",
+    "application_id": "LOAN-2026-000022",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-02-28T16:53:15",
+    "details": "DTI calculated: 50.15%, Net disposable: $29.51, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000022-04",
+    "application_id": "LOAN-2026-000022",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-02-28T17:13:15",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000023-01",
+    "application_id": "LOAN-2026-000023",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-07-30T03:04:47",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000023-02",
+    "application_id": "LOAN-2026-000023",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-07-30T04:07:47",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000023-03",
+    "application_id": "LOAN-2026-000023",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-07-30T04:12:47",
+    "details": "DTI calculated: 134.22%, Net disposable: $-3483.98, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000023-04",
+    "application_id": "LOAN-2026-000023",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-07-30T04:32:47",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000024-01",
+    "application_id": "LOAN-2026-000024",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-20T04:26:07",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000024-02",
+    "application_id": "LOAN-2026-000024",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-20T05:21:07",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000024-03",
+    "application_id": "LOAN-2026-000024",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-20T05:26:07",
+    "details": "DTI calculated: 100.00%, Net disposable: $-2495.94, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000024-04",
+    "application_id": "LOAN-2026-000024",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-20T05:46:07",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000025-01",
+    "application_id": "LOAN-2026-000025",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-05-30T23:43:04",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000025-02",
+    "application_id": "LOAN-2026-000025",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-05-31T00:42:04",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000025-03",
+    "application_id": "LOAN-2026-000025",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-05-31T00:47:04",
+    "details": "DTI calculated: 12.19%, Net disposable: $3632.63, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000025-04",
+    "application_id": "LOAN-2026-000025",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-05-30T21:32:04",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000025-05",
+    "application_id": "LOAN-2026-000025",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-05-31T21:32:04",
+    "details": "Disbursement completed. Amount: $3000.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000026-01",
+    "application_id": "LOAN-2026-000026",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-01T07:30:28",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000026-02",
+    "application_id": "LOAN-2026-000026",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-01T08:44:28",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000026-03",
+    "application_id": "LOAN-2026-000026",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-03-01T08:49:28",
+    "details": "DTI calculated: 42.42%, Net disposable: $247.72, Result: MARGINAL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000026-04",
+    "application_id": "LOAN-2026-000026",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "MANUAL_REVIEW",
+    "event_type": "DECISION_RENDERED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-01T09:09:28",
+    "details": "Decision rendered: MANUAL_REVIEW. Reasons: MARGINAL_AFFORDABILITY_BUFFER"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000027-01",
+    "application_id": "LOAN-2026-000027",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-12T09:50:59",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000027-02",
+    "application_id": "LOAN-2026-000027",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-12T10:43:59",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000027-03",
+    "application_id": "LOAN-2026-000027",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-03-12T10:48:59",
+    "details": "DTI calculated: 15.82%, Net disposable: $2281.73, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000027-04",
+    "application_id": "LOAN-2026-000027",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-03-12T11:08:59",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000027-05",
+    "application_id": "LOAN-2026-000027",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-13T11:08:59",
+    "details": "Disbursement completed. Amount: $26400.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000028-01",
+    "application_id": "LOAN-2026-000028",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-05-29T14:53:03",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000028-02",
+    "application_id": "LOAN-2026-000028",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-05-29T16:02:03",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000028-03",
+    "application_id": "LOAN-2026-000028",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-05-29T16:07:03",
+    "details": "DTI calculated: 80.56%, Net disposable: $-977.89, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000028-04",
+    "application_id": "LOAN-2026-000028",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-05-29T16:27:03",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_IDENTITY_VERIFICATION|PENDING_INCOME_DOCUMENT_VERIFICATION"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000029-01",
+    "application_id": "LOAN-2026-000029",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-30T00:08:24",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000029-02",
+    "application_id": "LOAN-2026-000029",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-30T01:03:24",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000029-03",
+    "application_id": "LOAN-2026-000029",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-08-30T01:08:24",
+    "details": "DTI calculated: 27.07%, Net disposable: $1336.77, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000029-04",
+    "application_id": "LOAN-2026-000029",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-08-30T01:28:24",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000029-05",
+    "application_id": "LOAN-2026-000029",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-31T01:28:24",
+    "details": "Disbursement completed. Amount: $19100.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000030-01",
+    "application_id": "LOAN-2026-000030",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-07-06T04:22:23",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000030-02",
+    "application_id": "LOAN-2026-000030",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-07-06T05:27:23",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000030-03",
+    "application_id": "LOAN-2026-000030",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-07-06T05:32:23",
+    "details": "DTI calculated: 6.85%, Net disposable: $3980.00, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000030-04",
+    "application_id": "LOAN-2026-000030",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-07-06T05:52:23",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000030-05",
+    "application_id": "LOAN-2026-000030",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-07-07T05:52:23",
+    "details": "Disbursement completed. Amount: $7000.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000030-134",
+    "application_id": "LOAN-2026-000030",
+    "from_status": "DISBURSED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "SYSTEM_ADMIN",
+    "timestamp": "2026-07-07T17:52:23",
+    "details": "DUPLICATE DISBURSEMENT DETECTED: Secondary funds payout triggered in error."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000031-01",
+    "application_id": "LOAN-2026-000031",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-26T04:53:08",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000031-02",
+    "application_id": "LOAN-2026-000031",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-26T05:43:08",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000031-03",
+    "application_id": "LOAN-2026-000031",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-26T05:48:08",
+    "details": "DTI calculated: 68.17%, Net disposable: $-558.73, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000031-04",
+    "application_id": "LOAN-2026-000031",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-26T06:08:08",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED|BORDERLINE_CREDIT_SCORE"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000032-01",
+    "application_id": "LOAN-2026-000032",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-06T01:25:08",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000032-02",
+    "application_id": "LOAN-2026-000032",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-06T02:15:08",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000032-03",
+    "application_id": "LOAN-2026-000032",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-09-06T02:20:08",
+    "details": "DTI calculated: 16.41%, Net disposable: $2421.15, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000032-04",
+    "application_id": "LOAN-2026-000032",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "MANUAL_REVIEW",
+    "event_type": "DECISION_RENDERED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-06T02:40:08",
+    "details": "Decision rendered: MANUAL_REVIEW. Reasons: PENDING_INCOME_DOCUMENT_VERIFICATION"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000033-01",
+    "application_id": "LOAN-2026-000033",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-29T09:41:29",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000033-02",
+    "application_id": "LOAN-2026-000033",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-29T10:46:29",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000033-03",
+    "application_id": "LOAN-2026-000033",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-29T10:51:29",
+    "details": "DTI calculated: 14.93%, Net disposable: $1481.09, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000033-04",
+    "application_id": "LOAN-2026-000033",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-29T11:11:29",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000033-05",
+    "application_id": "LOAN-2026-000033",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-30T11:11:29",
+    "details": "Disbursement completed. Amount: $26800.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000034-01",
+    "application_id": "LOAN-2026-000034",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-02-22T07:29:55",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000034-02",
+    "application_id": "LOAN-2026-000034",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-02-22T08:30:55",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000034-03",
+    "application_id": "LOAN-2026-000034",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-02-22T08:35:55",
+    "details": "DTI calculated: 60.46%, Net disposable: $-505.40, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000034-04",
+    "application_id": "LOAN-2026-000034",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-02-22T08:55:55",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000035-01",
+    "application_id": "LOAN-2026-000035",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-16T23:48:04",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000035-02",
+    "application_id": "LOAN-2026-000035",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-17T00:58:04",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000035-03",
+    "application_id": "LOAN-2026-000035",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-03-17T01:03:04",
+    "details": "DTI calculated: 15.91%, Net disposable: $3391.03, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000035-04",
+    "application_id": "LOAN-2026-000035",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-03-17T01:23:04",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000035-05",
+    "application_id": "LOAN-2026-000035",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-18T01:23:04",
+    "details": "Disbursement completed. Amount: $12000.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000035-157",
+    "application_id": "LOAN-2026-000035",
+    "from_status": "DISBURSED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "SYSTEM_ADMIN",
+    "timestamp": "2026-03-18T13:23:04",
+    "details": "DUPLICATE DISBURSEMENT DETECTED: Secondary funds payout triggered in error."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000036-01",
+    "application_id": "LOAN-2026-000036",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-19T07:39:39",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000036-02",
+    "application_id": "LOAN-2026-000036",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-09-19T08:52:39",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000036-03",
+    "application_id": "LOAN-2026-000036",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-09-19T08:57:39",
+    "details": "DTI calculated: 60.84%, Net disposable: $-200.05, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000036-04",
+    "application_id": "LOAN-2026-000036",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-09-19T09:17:39",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000037-01",
+    "application_id": "LOAN-2026-000037",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-07T03:14:00",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000037-02",
+    "application_id": "LOAN-2026-000037",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-07T04:26:00",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000037-03",
+    "application_id": "LOAN-2026-000037",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-03-07T04:31:00",
+    "details": "DTI calculated: 11.90%, Net disposable: $4053.89, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000037-04",
+    "application_id": "LOAN-2026-000037",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-03-07T04:51:00",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000037-05",
+    "application_id": "LOAN-2026-000037",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-08T04:51:00",
+    "details": "Disbursement completed. Amount: $21900.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000038-01",
+    "application_id": "LOAN-2026-000038",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-21T02:31:07",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000038-02",
+    "application_id": "LOAN-2026-000038",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-21T03:35:07",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000038-03",
+    "application_id": "LOAN-2026-000038",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-08-21T03:40:07",
+    "details": "DTI calculated: 146.68%, Net disposable: $-2067.17, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000038-04",
+    "application_id": "LOAN-2026-000038",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-08-21T04:00:07",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000039-01",
+    "application_id": "LOAN-2026-000039",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-02-14T22:18:15",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000039-02",
+    "application_id": "LOAN-2026-000039",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-02-14T23:33:15",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000039-03",
+    "application_id": "LOAN-2026-000039",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-02-14T23:38:15",
+    "details": "DTI calculated: 99.04%, Net disposable: $-1456.64, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000039-04",
+    "application_id": "LOAN-2026-000039",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-02-14T23:58:15",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_CREDIT_SCORE_BELOW_MIN|FAIL_AFFORDABILITY_DTI_EXCEEDED"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000040-01",
+    "application_id": "LOAN-2026-000040",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-14T09:06:41",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000040-02",
+    "application_id": "LOAN-2026-000040",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-14T10:19:41",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000040-03",
+    "application_id": "LOAN-2026-000040",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-14T10:24:41",
+    "details": "DTI calculated: 55.11%, Net disposable: $-394.07, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000040-04",
+    "application_id": "LOAN-2026-000040",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-14T10:44:41",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_CREDIT_SCORE_BELOW_MIN|FAIL_AFFORDABILITY_DTI_EXCEEDED"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000041-01",
+    "application_id": "LOAN-2026-000041",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-10T21:56:45",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000041-02",
+    "application_id": "LOAN-2026-000041",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-10T23:01:45",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000041-03",
+    "application_id": "LOAN-2026-000041",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-03-10T23:06:45",
+    "details": "DTI calculated: 100.00%, Net disposable: $-2128.25, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000041-04",
+    "application_id": "LOAN-2026-000041",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-03-10T23:26:45",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_INCOME_DOCUMENT_VERIFICATION"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000042-01",
+    "application_id": "LOAN-2026-000042",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-06T19:14:26",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000042-02",
+    "application_id": "LOAN-2026-000042",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-06T20:23:26",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000042-03",
+    "application_id": "LOAN-2026-000042",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-08-06T20:28:26",
+    "details": "DTI calculated: 73.18%, Net disposable: $-745.35, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000042-04",
+    "application_id": "LOAN-2026-000042",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-08-06T20:48:26",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED|FAIL_KYC_IDENTITY_UNVERIFIED"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000043-01",
+    "application_id": "LOAN-2026-000043",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-02-01T10:11:51",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000043-02",
+    "application_id": "LOAN-2026-000043",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-02-01T11:14:51",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000043-03",
+    "application_id": "LOAN-2026-000043",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-02-01T11:19:51",
+    "details": "DTI calculated: 52.89%, Net disposable: $-10.97, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000043-04",
+    "application_id": "LOAN-2026-000043",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-02-01T11:39:51",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000044-01",
+    "application_id": "LOAN-2026-000044",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-12T17:29:02",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000044-02",
+    "application_id": "LOAN-2026-000044",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-12T18:19:02",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000044-03",
+    "application_id": "LOAN-2026-000044",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-03-12T18:24:02",
+    "details": "DTI calculated: 22.98%, Net disposable: $2849.10, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000044-04",
+    "application_id": "LOAN-2026-000044",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-03-12T18:44:02",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000044-05",
+    "application_id": "LOAN-2026-000044",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-13T18:44:02",
+    "details": "Disbursement completed. Amount: $22200.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000045-01",
+    "application_id": "LOAN-2026-000045",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-24T06:39:42",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000045-02",
+    "application_id": "LOAN-2026-000045",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-24T07:39:42",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000045-03",
+    "application_id": "LOAN-2026-000045",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-08-24T07:44:42",
+    "details": "DTI calculated: 27.98%, Net disposable: $1822.63, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000045-04",
+    "application_id": "LOAN-2026-000045",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-08-24T08:04:42",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_KYC_IDENTITY_UNVERIFIED"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000046-01",
+    "application_id": "LOAN-2026-000046",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-26T15:56:23",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000046-02",
+    "application_id": "LOAN-2026-000046",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-26T16:54:23",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000046-03",
+    "application_id": "LOAN-2026-000046",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-06-26T16:59:23",
+    "details": "DTI calculated: 62.71%, Net disposable: $-262.91, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000046-04",
+    "application_id": "LOAN-2026-000046",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-06-26T17:19:23",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000047-01",
+    "application_id": "LOAN-2026-000047",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-15T04:21:03",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000047-02",
+    "application_id": "LOAN-2026-000047",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-15T05:35:03",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000047-03",
+    "application_id": "LOAN-2026-000047",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-06-15T05:40:03",
+    "details": "DTI calculated: 111.90%, Net disposable: $-1640.02, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000047-04",
+    "application_id": "LOAN-2026-000047",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-06-15T06:00:03",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000048-01",
+    "application_id": "LOAN-2026-000048",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-28T21:10:23",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000048-02",
+    "application_id": "LOAN-2026-000048",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-28T22:10:23",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000048-03",
+    "application_id": "LOAN-2026-000048",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-28T22:15:23",
+    "details": "DTI calculated: 32.56%, Net disposable: $1455.69, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000048-04",
+    "application_id": "LOAN-2026-000048",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-28T22:35:23",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000048-05",
+    "application_id": "LOAN-2026-000048",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-29T22:35:23",
+    "details": "Disbursement completed. Amount: $39200.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000049-01",
+    "application_id": "LOAN-2026-000049",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-02T08:12:36",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000049-02",
+    "application_id": "LOAN-2026-000049",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-02T09:19:36",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000049-03",
+    "application_id": "LOAN-2026-000049",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-06-02T09:24:36",
+    "details": "DTI calculated: 32.67%, Net disposable: $2250.17, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000049-04",
+    "application_id": "LOAN-2026-000049",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "MANUAL_REVIEW",
+    "event_type": "DECISION_RENDERED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-02T09:44:36",
+    "details": "Decision rendered: MANUAL_REVIEW. Reasons: PENDING_INCOME_DOCUMENT_VERIFICATION"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000050-01",
+    "application_id": "LOAN-2026-000050",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-02T12:46:30",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000050-02",
+    "application_id": "LOAN-2026-000050",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-04-02T13:55:30",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000050-03",
+    "application_id": "LOAN-2026-000050",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-02T14:00:30",
+    "details": "DTI calculated: 2293.70%, Net disposable: $-3554.31, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000050-04",
+    "application_id": "LOAN-2026-000050",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-04-02T14:20:30",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED|FAIL_UNSTABLE_EMPLOYMENT_NO_INCOME|PENDING_INCOME_DOCUMENT_VERIFICATION"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000051-01",
+    "application_id": "LOAN-2026-000051",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-07-14T09:56:12",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000051-02",
+    "application_id": "LOAN-2026-000051",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-07-14T11:07:12",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000051-03",
+    "application_id": "LOAN-2026-000051",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-07-14T11:12:12",
+    "details": "DTI calculated: 227.67%, Net disposable: $-3490.52, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000051-04",
+    "application_id": "LOAN-2026-000051",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-07-14T11:32:12",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_INCOME_DOCUMENT_VERIFICATION|INCOME_DECLARED_VERIFIED_DISCREPANCY"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000052-01",
+    "application_id": "LOAN-2026-000052",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-04T09:57:19",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000052-02",
+    "application_id": "LOAN-2026-000052",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-04T11:02:19",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000052-03",
+    "application_id": "LOAN-2026-000052",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-08-04T11:07:19",
+    "details": "DTI calculated: 33.71%, Net disposable: $1163.65, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000052-04",
+    "application_id": "LOAN-2026-000052",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-08-04T11:27:19",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000052-05",
+    "application_id": "LOAN-2026-000052",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-05T11:27:19",
+    "details": "Disbursement completed. Amount: $27200.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000053-01",
+    "application_id": "LOAN-2026-000053",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-07-09T10:59:21",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000053-02",
+    "application_id": "LOAN-2026-000053",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-07-09T11:51:21",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000053-03",
+    "application_id": "LOAN-2026-000053",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-07-09T11:56:21",
+    "details": "DTI calculated: 49.18%, Net disposable: $95.36, Result: MARGINAL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000053-04",
+    "application_id": "LOAN-2026-000053",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "MANUAL_REVIEW",
+    "event_type": "DECISION_RENDERED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-07-09T12:16:21",
+    "details": "Decision rendered: MANUAL_REVIEW. Reasons: MARGINAL_AFFORDABILITY_BUFFER"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000054-01",
+    "application_id": "LOAN-2026-000054",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-10-13T23:51:44",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000054-02",
+    "application_id": "LOAN-2026-000054",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-10-14T00:57:44",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000054-03",
+    "application_id": "LOAN-2026-000054",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-10-14T01:02:44",
+    "details": "DTI calculated: 34.96%, Net disposable: $341.42, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000054-04",
+    "application_id": "LOAN-2026-000054",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-10-14T01:22:44",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000054-05",
+    "application_id": "LOAN-2026-000054",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-10-15T01:22:44",
+    "details": "Disbursement completed. Amount: $38400.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000055-01",
+    "application_id": "LOAN-2026-000055",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-07-15T22:52:22",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000055-02",
+    "application_id": "LOAN-2026-000055",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-07-16T00:06:22",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000055-03",
+    "application_id": "LOAN-2026-000055",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-07-16T00:11:22",
+    "details": "DTI calculated: 67.21%, Net disposable: $-622.50, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000055-04",
+    "application_id": "LOAN-2026-000055",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-07-16T00:31:22",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000056-01",
+    "application_id": "LOAN-2026-000056",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-09T21:46:17",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000056-02",
+    "application_id": "LOAN-2026-000056",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-09T22:53:17",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000056-03",
+    "application_id": "LOAN-2026-000056",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-06-09T22:58:17",
+    "details": "DTI calculated: 14.98%, Net disposable: $3286.51, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000056-04",
+    "application_id": "LOAN-2026-000056",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-06-09T23:18:17",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000056-05",
+    "application_id": "LOAN-2026-000056",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-06-10T23:18:17",
+    "details": "Disbursement completed. Amount: $22400.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000057-01",
+    "application_id": "LOAN-2026-000057",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-03T13:36:02",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000057-02",
+    "application_id": "LOAN-2026-000057",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-03-03T14:48:02",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000057-03",
+    "application_id": "LOAN-2026-000057",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-03-03T14:53:02",
+    "details": "DTI calculated: 169.42%, Net disposable: $-1335.88, Result: FAIL"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000057-04",
+    "application_id": "LOAN-2026-000057",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "REJECTED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-03-03T15:13:02",
+    "details": "Decision rendered: REJECTED. Reasons: FAIL_AFFORDABILITY_DTI_EXCEEDED|INCOME_DECLARED_VERIFIED_DISCREPANCY"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000058-01",
+    "application_id": "LOAN-2026-000058",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-05-24T12:22:28",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000058-02",
+    "application_id": "LOAN-2026-000058",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-05-24T13:23:28",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000058-03",
+    "application_id": "LOAN-2026-000058",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-05-24T13:28:28",
+    "details": "DTI calculated: 41.69%, Net disposable: $335.33, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000058-04",
+    "application_id": "LOAN-2026-000058",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-05-24T13:48:28",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000058-05",
+    "application_id": "LOAN-2026-000058",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-05-25T13:48:28",
+    "details": "Disbursement completed. Amount: $23300.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000059-01",
+    "application_id": "LOAN-2026-000059",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-24T19:28:05",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000059-02",
+    "application_id": "LOAN-2026-000059",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-24T20:22:05",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000059-03",
+    "application_id": "LOAN-2026-000059",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-08-24T20:27:05",
+    "details": "DTI calculated: 38.69%, Net disposable: $836.85, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000059-04",
+    "application_id": "LOAN-2026-000059",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "APPROVED",
+    "event_type": "DECISION_RENDERED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-08-24T20:47:05",
+    "details": "Decision rendered: APPROVED. Reasons: PASS_ALL_UNDERWRITING_CRITERIA"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000059-05",
+    "application_id": "LOAN-2026-000059",
+    "from_status": "APPROVED",
+    "to_status": "DISBURSED",
+    "event_type": "FUNDS_DISBURSED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-25T20:47:05",
+    "details": "Disbursement completed. Amount: $64400.00 transferred to applicant account."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000060-01",
+    "application_id": "LOAN-2026-000060",
+    "from_status": "NONE",
+    "to_status": "SUBMITTED",
+    "event_type": "APPLICATION_SUBMITTED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-29T19:48:09",
+    "details": "Loan application formally submitted by applicant."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000060-02",
+    "application_id": "LOAN-2026-000060",
+    "from_status": "SUBMITTED",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "DOCUMENTS_VERIFIED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-29T20:52:09",
+    "details": "Mandatory KYC and income documents collected and reviewed."
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000060-03",
+    "application_id": "LOAN-2026-000060",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "UNDER_REVIEW",
+    "event_type": "AFFORDABILITY_EVALUATED",
+    "actor": "AUTOMATED_RULES_ENGINE",
+    "timestamp": "2026-08-29T20:57:09",
+    "details": "DTI calculated: 31.59%, Net disposable: $384.97, Result: PASS"
+  },
+  {
+    "event_id": "EVT-LOAN-2026-000060-04",
+    "application_id": "LOAN-2026-000060",
+    "from_status": "UNDER_REVIEW",
+    "to_status": "MANUAL_REVIEW",
+    "event_type": "DECISION_RENDERED",
+    "actor": "OPERATIONS_ANALYST",
+    "timestamp": "2026-08-29T21:17:09",
+    "details": "Decision rendered: MANUAL_REVIEW. Reasons: PENDING_IDENTITY_VERIFICATION"
+  }
+]

@@ -1,0 +1,65 @@
+application_id,entity_type,record_id,issue_type,is_anomaly,expected_decision,rule_triggered,description
+LOAN-2026-000001,LoanApplication,LOAN-2026-000001,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000002,LoanApplication,LOAN-2026-000002,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000003,LoanApplication,LOAN-2026-000003,NONE,False,REJECTED,FAIL_CREDIT_SCORE_BELOW_MIN,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000004,LoanApplication,LOAN-2026-000004,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000005,LoanApplication,LOAN-2026-000005,NONE,False,MANUAL_REVIEW,BORDERLINE_CREDIT_SCORE,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000006,LoanApplication,LOAN-2026-000006,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000007,LoanApplication,LOAN-2026-000007,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED|BORDERLINE_CREDIT_SCORE,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000008,LoanApplication,LOAN-2026-000008,NONE,False,MANUAL_REVIEW,MARGINAL_AFFORDABILITY_BUFFER,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000009,LoanApplication,LOAN-2026-000009,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000010,LoanApplication,LOAN-2026-000010,TERM_OUT_OF_BOUNDS,True,REJECTED,ERR_TERM_OUT_OF_BOUNDS,Requested term 108m exceeds product maximum 84m.
+LOAN-2026-000011,LoanApplication,LOAN-2026-000011,NONE,False,REJECTED,FAIL_CREDIT_SCORE_BELOW_MIN,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000012,LoanApplication,LOAN-2026-000012,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000013,LoanApplication,LOAN-2026-000013,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000014,LoanApplication,LOAN-2026-000014,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000015,LoanApplication,LOAN-2026-000015,TERM_OUT_OF_BOUNDS,True,REJECTED,ERR_TERM_OUT_OF_BOUNDS,Requested term 96m exceeds product maximum 72m.
+LOAN-2026-000015,LoanApplication,LOAN-2026-000015,INCOME_SOURCE_CONFLICT,True,MANUAL_REVIEW,INCOME_DECLARED_VERIFIED_DISCREPANCY,Declared income $4945.92 diverges > 200% from verified income $1545.6000000000001.
+LOAN-2026-000016,LoanApplication,LOAN-2026-000016,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000017,LoanApplication,LOAN-2026-000017,NONE,False,REJECTED,FAIL_CREDIT_SCORE_BELOW_MIN,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000018,LoanApplication,LOAN-2026-000018,NONE,False,REJECTED,FAIL_CREDIT_SCORE_BELOW_MIN|PENDING_IDENTITY_VERIFICATION,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000019,LoanApplication,LOAN-2026-000019,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_INCOME_DOCUMENT_VERIFICATION,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000020,LoanApplication,LOAN-2026-000020,INCOME_SOURCE_CONFLICT,True,MANUAL_REVIEW,INCOME_DECLARED_VERIFIED_DISCREPANCY,Declared income $12307.3 diverges > 200% from verified income $3846.0299999999997.
+LOAN-2026-000020,Decision,DEC-LOAN-2026-000020-01,DECISION_PRECEDES_CHECKS,True,REJECTED,TEMPORAL_SEQUENCE_VIOLATION,Decision timestamp 2026-06-27 08:26:17 occurred before affordability check 2026-06-27 11:41:17.
+LOAN-2026-000021,LoanApplication,LOAN-2026-000021,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000022,LoanApplication,LOAN-2026-000022,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000023,LoanApplication,LOAN-2026-000023,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000024,LoanApplication,LOAN-2026-000024,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000025,Decision,DEC-LOAN-2026-000025-01,DECISION_PRECEDES_CHECKS,True,APPROVED,TEMPORAL_SEQUENCE_VIOLATION,Decision timestamp 2026-05-30 21:32:04 occurred before affordability check 2026-05-31 00:47:04.
+LOAN-2026-000025,RepaymentSchedule,SCH-LOAN-2026-000025-24,SCHEDULE_RECONCILIATION_MISMATCH,True,APPROVED,SCHEDULE_ARITHMETIC_RECONCILIATION_MISMATCH,Repayment schedule for loan LOAN-2026-000025 does not sum to approved principal $3000.00.
+LOAN-2026-000026,LoanApplication,LOAN-2026-000026,NONE,False,MANUAL_REVIEW,MARGINAL_AFFORDABILITY_BUFFER,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000027,LoanApplication,LOAN-2026-000027,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000028,LoanApplication,LOAN-2026-000028,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_IDENTITY_VERIFICATION|PENDING_INCOME_DOCUMENT_VERIFICATION,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000029,LoanApplication,LOAN-2026-000029,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000030,RepaymentSchedule,SCH-LOAN-2026-000030-36,SCHEDULE_RECONCILIATION_MISMATCH,True,APPROVED,SCHEDULE_ARITHMETIC_RECONCILIATION_MISMATCH,Repayment schedule for loan LOAN-2026-000030 does not sum to approved principal $7000.00.
+LOAN-2026-000030,ApplicationEvent,EVT-LOAN-2026-000030-134,DUPLICATE_DISBURSEMENT,True,APPROVED,DUPLICATE_DISBURSEMENT_VIOLATION,Application LOAN-2026-000030 received duplicate disbursement event EVT-LOAN-2026-000030-134.
+LOAN-2026-000031,LoanApplication,LOAN-2026-000031,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED|BORDERLINE_CREDIT_SCORE,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000032,LoanApplication,LOAN-2026-000032,NONE,False,MANUAL_REVIEW,PENDING_INCOME_DOCUMENT_VERIFICATION,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000033,LoanApplication,LOAN-2026-000033,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000034,LoanApplication,LOAN-2026-000034,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000035,ApplicationEvent,EVT-LOAN-2026-000035-157,DUPLICATE_DISBURSEMENT,True,APPROVED,DUPLICATE_DISBURSEMENT_VIOLATION,Application LOAN-2026-000035 received duplicate disbursement event EVT-LOAN-2026-000035-157.
+LOAN-2026-000036,LoanApplication,LOAN-2026-000036,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000037,LoanApplication,LOAN-2026-000037,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000038,LoanApplication,LOAN-2026-000038,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000039,LoanApplication,LOAN-2026-000039,NONE,False,REJECTED,FAIL_CREDIT_SCORE_BELOW_MIN|FAIL_AFFORDABILITY_DTI_EXCEEDED,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000040,LoanApplication,LOAN-2026-000040,NONE,False,REJECTED,FAIL_CREDIT_SCORE_BELOW_MIN|FAIL_AFFORDABILITY_DTI_EXCEEDED,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000041,LoanApplication,LOAN-2026-000041,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_INCOME_DOCUMENT_VERIFICATION,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000042,LoanApplication,LOAN-2026-000042,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED|FAIL_KYC_IDENTITY_UNVERIFIED,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000043,LoanApplication,LOAN-2026-000043,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000044,LoanApplication,LOAN-2026-000044,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000045,LoanApplication,LOAN-2026-000045,NONE,False,REJECTED,FAIL_KYC_IDENTITY_UNVERIFIED,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000046,LoanApplication,LOAN-2026-000046,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000047,LoanApplication,LOAN-2026-000047,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000048,LoanApplication,LOAN-2026-000048,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000049,LoanApplication,LOAN-2026-000049,NONE,False,MANUAL_REVIEW,PENDING_INCOME_DOCUMENT_VERIFICATION,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000050,LoanApplication,LOAN-2026-000050,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED|FAIL_UNSTABLE_EMPLOYMENT_NO_INCOME|PENDING_INCOME_DOCUMENT_VERIFICATION,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000051,LoanApplication,LOAN-2026-000051,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED|PENDING_INCOME_DOCUMENT_VERIFICATION|INCOME_DECLARED_VERIFIED_DISCREPANCY,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000052,LoanApplication,LOAN-2026-000052,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000053,LoanApplication,LOAN-2026-000053,NONE,False,MANUAL_REVIEW,MARGINAL_AFFORDABILITY_BUFFER,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000054,LoanApplication,LOAN-2026-000054,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000055,LoanApplication,LOAN-2026-000055,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000056,LoanApplication,LOAN-2026-000056,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000057,LoanApplication,LOAN-2026-000057,NONE,False,REJECTED,FAIL_AFFORDABILITY_DTI_EXCEEDED|INCOME_DECLARED_VERIFIED_DISCREPANCY,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000058,LoanApplication,LOAN-2026-000058,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000059,LoanApplication,LOAN-2026-000059,NONE,False,APPROVED,PASS_ALL_UNDERWRITING_CRITERIA,Valid standard workflow application obeying all domain rules.
+LOAN-2026-000060,LoanApplication,LOAN-2026-000060,NONE,False,MANUAL_REVIEW,PENDING_IDENTITY_VERIFICATION,Valid standard workflow application obeying all domain rules.
