@@ -80,7 +80,10 @@ export const SettingsPage: React.FC<SettingsPageProps> = ({ scale, onScaleChange
                     <Badge variant="forest" size="sm">Comprehensive</Badge>
                   </div>
                   <p className="text-xs text-gray-500 mt-1">
-                    10,000 Applicants • 6,000 Applications • 24,000 Documents • Full enterprise volume
+                    10,000 Applicants • 6,000 Applications • 24,000 Documents • Full enterprise volume (~75 MB)
+                  </p>
+                  <p className="text-[11px] text-gray-400 mt-1">
+                    Note: Prepared locally via <code className="bg-gray-100 px-1 py-0.5 rounded text-gray-600 font-mono">npm run prepare-data</code>. Cloud deployments default to Starter Scale if data is not bundled.
                   </p>
                 </div>
                 {scale === 'full' && (

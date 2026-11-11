@@ -15,7 +15,18 @@ import { dataService } from '@/services/dataService';
 export const App: React.FC = () => {
   const [scale, setScale] = useState<'starter' | 'full'>(dataService.getScale());
 
-  const handleScaleChange = (newScale: 'starter' | 'full') => {
+  const handleScaleChange = async (newScale: 'starter' | 'full') => {
+    if (newScale === 'full') {
+      const isAvailable = await dataService.isFullScaleAvailable();
+      if (!isAvailable) {
+        dataService.setFullScaleNotice(
+          'Full Scale dataset (~75 MB) is excluded from cloud deployment to optimize static delivery. The dashboard has defaulted to Starter Scale (60 loans). To inspect Full Scale locally, run "python -m src.cli generate --scale full" and "npm run prepare-data".'
+        );
+        dataService.setScale('starter');
+        setScale('starter');
+        return;
+      }
+    }
     dataService.setScale(newScale);
     setScale(newScale);
     window.location.reload();

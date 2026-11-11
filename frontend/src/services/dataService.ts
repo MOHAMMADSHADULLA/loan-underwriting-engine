@@ -23,6 +23,8 @@ class DataService {
       ? 'full'
       : 'starter';
   private loadingPromise: Promise<LoanDataset> | null = null;
+  private fullScaleNotice: string | null = null;
+  private noticeListeners: Array<(notice: string | null) => void> = [];
 
   public clearCache() {
     this.cache = null;
@@ -44,8 +46,56 @@ class DataService {
     }
   }
 
+  public getFullScaleNotice(): string | null {
+    return this.fullScaleNotice;
+  }
+
+  public setFullScaleNotice(notice: string | null) {
+    this.fullScaleNotice = notice;
+    this.notifyNoticeListeners();
+  }
+
+  public clearFullScaleNotice(): void {
+    this.fullScaleNotice = null;
+    this.notifyNoticeListeners();
+  }
+
+  public onNoticeChange(callback: (notice: string | null) => void): () => void {
+    this.noticeListeners.push(callback);
+    callback(this.fullScaleNotice);
+    return () => {
+      this.noticeListeners = this.noticeListeners.filter((cb) => cb !== callback);
+    };
+  }
+
+  private notifyNoticeListeners() {
+    this.noticeListeners.forEach((cb) => {
+      try {
+        cb(this.fullScaleNotice);
+      } catch (err) {
+        console.error('Error notifying notice listener:', err);
+      }
+    });
+  }
+
   /**
-   * Loads all dataset tables in parallel.
+   * Checks whether the Full Scale data directory is accessible without firing multiple 404s.
+   */
+  public async isFullScaleAvailable(): Promise<boolean> {
+    try {
+      const res = await fetch('/data/full/loan_products.json', { method: 'HEAD' }).catch(() => null);
+      if (res && (res.ok || res.status === 200 || res.status === 304)) {
+        return true;
+      }
+      const getRes = await fetch('/data/full/loan_products.json').catch(() => null);
+      return Boolean(getRes && (getRes.ok || getRes.status === 200 || getRes.status === 304));
+    } catch {
+      return false;
+    }
+  }
+
+  /**
+   * Loads all dataset tables in parallel with graceful Full Scale fallback.
    */
   public async loadDataset(): Promise<LoanDataset> {
     if (this.cache) {
@@ -56,6 +106,25 @@ class DataService {
     }
 
     this.loadingPromise = (async () => {
+      // If Full Scale is selected, probe first to ensure files exist on server.
+      // If missing (e.g. deployed static host where 75MB data is excluded),
+      // gracefully fall back to Starter Scale, update localStorage, and avoid repeated 404s.
+      if (this.currentScale === 'full') {
+        const available = await this.isFullScaleAvailable();
+        if (!available) {
+          console.warn(
+            '[DataService] Full Scale dataset is not deployed on this instance. Falling back to Starter Scale.'
+          );
+          this.currentScale = 'starter';
+          if (typeof window !== 'undefined') {
+            window.localStorage?.setItem('yottaflex_scale', 'starter');
+          }
+          this.fullScaleNotice =
+            'Full Scale dataset (~75 MB) is excluded from cloud deployment to optimize static delivery. Operating on Starter Scale (60 loans). To inspect Full Scale locally, run "python -m src.cli generate --scale full" and "npm run prepare-data".';
+          this.notifyNoticeListeners();
+        }
+      }
+
       const basePath = `/data/${this.currentScale}`;
 
       const fetchJson = async <T>(file: string, fallback: T): Promise<T> => {

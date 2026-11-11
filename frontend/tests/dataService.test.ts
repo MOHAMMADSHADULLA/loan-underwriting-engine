@@ -89,4 +89,47 @@ describe('DataService & Relational Joins', () => {
     const page3 = await dataService.getApplications({ page: 3, pageSize: 10 });
     expect(page3.items).toHaveLength(5);
   });
+
+  it('gracefully falls back to starter scale when full scale files are unavailable', async () => {
+    dataService.setScale('full');
+    expect(dataService.getScale()).toBe('full');
+
+    // Mock fetch: /data/full/loan_products.json returns 404, while starter returns valid data
+    global.fetch = vi.fn().mockImplementation((url: string) => {
+      if (url.includes('/data/full/loan_products.json')) {
+        return Promise.resolve({ ok: false, status: 404 });
+      }
+      if (url.includes('/data/starter/loan_applications.json')) {
+        return Promise.resolve({
+          ok: true,
+          status: 200,
+          json: () =>
+            Promise.resolve([
+              {
+                application_id: 'LOAN-2026-000001',
+                applicant_id: 'APP-2026-000001',
+                product_id: 'PROD-001',
+                requested_principal: 10000,
+                requested_term_months: 24,
+                purpose: 'DEBT_CONSOLIDATION',
+                application_status: 'APPROVED',
+                credit_score: 720,
+                declared_monthly_income: 5000,
+                submission_timestamp: '2026-01-01T10:00:00',
+                updated_at: '2026-01-01T10:00:00',
+              },
+            ]),
+        });
+      }
+      return Promise.resolve({ ok: true, status: 200, json: () => Promise.resolve([]) });
+    });
+
+    const dataset = await dataService.loadDataset();
+
+    // Verify fallback occurred
+    expect(dataService.getScale()).toBe('starter');
+    expect(dataService.getFullScaleNotice()).toContain('Full Scale dataset');
+    expect(dataset.loan_applications).toHaveLength(1);
+    expect(dataset.loan_applications[0].application_id).toBe('LOAN-2026-000001');
+  });
 });
