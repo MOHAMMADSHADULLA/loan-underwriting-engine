@@ -225,3 +225,14 @@ python -m src.cli verify-reproducibility --seed 20261022 --applicants 10000 --ap
 1. **In-Memory Scale:** The current generator executes fully in-memory before exporting to CSV/JSON/SQL. For production volumes exceeding 1,000,000 applicants, a streaming chunk-based generator or database-backed pipeline should be utilized.
 2. **Simplified Tax Modeling:** Net income is modeled using standard empirical tax withholding brackets (72%–80% of gross), rather than jurisdiction-specific municipal and federal tax filing schedules.
 3. **Fixed Day-Count Convention:** Amortization schedules assume standard 30-day monthly intervals rather than exact 30/360 or Actual/Actual day-count conventions.
+
+---
+
+## 10. AI Transparency (YottaFlex Requirement)
+
+YottaFlex requires disclosure of all AI tools and prompts used during the challenge.
+
+| Document | Description |
+| :--- | :--- |
+| [`submission/AI_PROMPT_HISTORY.md`](submission/AI_PROMPT_HISTORY.md) | History of prompts submitted to AI tools (Google Antigravity and ChatGPT) during this project, including verbatim prompts from Antigravity and recovery disclosures for ChatGPT. |
+| [`submission/AI_USAGE_DISCLOSURE.md`](submission/AI_USAGE_DISCLOSURE.md) | Full disclosure of which AI tools were used, what they generated, which decisions I reviewed, how I verified results, what I understand, and known limitations. |
