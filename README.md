@@ -1,9 +1,25 @@
 # Loan Underwriting & Decisioning Engine
 ### End-to-End Synthetic Data Generation, Underwriting Rules Engine & Validation Suite
+**Deterministic synthetic loan underwriting, affordability assessment and decisioning platform.**
+
 **Role:** Associate AI Forward Deployed Engineer / AI Forward Deployed Engineer  
 **Organization:** YottaFlex.ai — Round 2 72-Hour Technical Code Challenge  
 **Target Reference Period:** 2026 Originations  
 **Fixed Seed:** `20261022`
+
+---
+
+## Project Links
+
+- 🚀 **Live Dashboard:** [Open Live Dashboard](https://loan-underwriting-engine.vercel.app/)
+- 💻 **GitHub Repository:** [View GitHub Repository](https://github.com/MOHAMMADSHADULLA/loan-underwriting-engine)
+
+### Documentation
+- [DATA_DICTIONARY.md](DATA_DICTIONARY.md) — Comprehensive schema definitions, types, constraints, and validation rules
+- [ERD.md](ERD.md) — Entity-relationship diagram, cardinality specifications, and lifecycle state machines
+- [SOURCE_MANIFEST.md](SOURCE_MANIFEST.md) — Source code structure, provenance declaration, and synthetic data confirmation
+- [submission/AI_USAGE_DISCLOSURE.md](submission/AI_USAGE_DISCLOSURE.md) — Transparent disclosure of AI tool usage, human decisions, and verification
+- [submission/AI_PROMPT_HISTORY.md](submission/AI_PROMPT_HISTORY.md) — AI tool prompt history, recovered prompts, and conversation-recovery methodology
 
 ---
 
