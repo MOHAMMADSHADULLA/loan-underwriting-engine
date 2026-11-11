@@ -1,6 +1,6 @@
 # Loan Underwriting Engine — Validation & Audit Report
 
-**Report Generation Date:** 2026-11-11T17:58:59.107233  
+**Report Generation Date:** 2026-11-11T18:07:44.405644  
 **Evaluated Dataset:** {'products': 4, 'applicants': 10000, 'employments': 10000, 'income_records': 11919, 'credit_facilities': 18103, 'applications': 6000, 'documents': 24000, 'affordability_checks': 6000, 'decisions': 6000, 'repayment_schedules': 92232, 'application_events': 25878, 'ground_truth_entries': 6000}
 
 ---
